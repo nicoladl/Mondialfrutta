@@ -1,0 +1,16 @@
+name: mondialfrutta
+type: theme
+description: Logistica ortofrutticola
+core: 8.x
+
+base: classy
+
+libraries:
+    - mondialfrutta/global-css
+    - mondialfrutta/global-js
+
+regions:
+    header: Header
+    visual: Visual
+    content: Content
+    footer: Footer
