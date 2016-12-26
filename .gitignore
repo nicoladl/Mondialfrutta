@@ -42,4 +42,5 @@ sites/simpletest
 core/phpcs.xml
 core/phpunit.xml
 
+**/*/*.log
 **/*/.sass-cache
