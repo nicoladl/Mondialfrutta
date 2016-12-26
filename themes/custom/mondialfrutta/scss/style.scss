@@ -1,8 +1,11 @@
 @import '_normalize.scss';
+@import '_reset.scss';
 @import '_config.scss';
 
 @import '_header.scss';
-
 @import '_visual.scss';
-
 @import '_hp-row.scss';
+
+@import '_cta.scss';
+@import '_text.scss';
+@import '_title.scss';

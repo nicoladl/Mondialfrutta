@@ -402,6 +402,9 @@ template {
 [hidden] {
   display: none; }
 
+h1, h2, h3 {
+  font-weight: 300; }
+
 header {
   width: 100%;
   height: 80px;
@@ -453,6 +456,7 @@ header {
   position: relative;
   overflow: hidden; }
   .visual .main-title {
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
     color: #fff;
     font-size: 30px;
@@ -487,27 +491,6 @@ header {
 .hp-row {
   width: 880px;
   margin: 0 auto; }
-  .hp-row .text {
-    font-family: 'Montserrat', sans-serif; }
-    .hp-row .text__title {
-      color: #71BD44;
-      font-size: 42px;
-      font-weight: 300; }
-  .hp-row .cta {
-    background-color: #ED4225;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 16px;
-    float: left; }
-    .hp-row .cta a {
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 300;
-      text-decoration: none;
-      padding: 0 70px;
-      line-height: 40px; }
-      .hp-row .cta a:hover {
-        text-decoration: underline; }
   .hp-row .image img {
     width: 100%;
     height: 100%; }
@@ -532,5 +515,34 @@ header {
 #block-clienti .image--orizontal {
   width: 620px;
   height: 290px; }
+
+.cta {
+  background-color: #ED4225;
+  border-radius: 20px;
+  text-align: center;
+  font-size: .8em;
+  letter-spacing: 1px;
+  float: left; }
+  .cta a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 0 70px;
+    line-height: 40px; }
+    .cta a:hover {
+      text-decoration: underline; }
+
+.text {
+  font-size: 15px;
+  color: #222601;
+  letter-spacing: 0;
+  line-height: 25px; }
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  color: #71BD44;
+  font-size: 42px;
+  letter-spacing: 1px; }
 
 /*# sourceMappingURL=style.css.map */

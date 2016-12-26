@@ -1,0 +1,21 @@
+.cta {
+    background-color: #ED4225;
+    border-radius: 20px;
+    text-align: center;
+    font-size: .8em;
+    letter-spacing: 1px;
+    float: left;
+
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-decoration: none;
+        padding: 0 70px;
+        line-height: 40px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

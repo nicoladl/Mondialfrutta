@@ -39,10 +39,10 @@
 
 {%
   set classes = [
-    'title'
+    'text'
   ]
 %}
 
 {% for item in items %}
-    <h3{{ attributes.addClass(classes) }}>{{ item.content }}</h3>
+  <div{{ attributes.addClass(classes) }} {{ item.attributes }}>{{ item.content }}</div>
 {% endfor %}
