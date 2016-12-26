@@ -1,8 +1,12 @@
 .hp-row {
     width: 880px;
+    height: 100vh;
     margin: 0 auto;
+    position: relative;
+    padding-bottom: 10%;
 
     .image {
+        position: absolute;
 
         img {
             width: 100%;
@@ -12,43 +16,68 @@
 }
 
 #block-azienda {
+    .text--row {
+        padding-top: 400px;
+    }
+
     .image {
         &--vertical {
             width: 540px;
             height: 290px;
+            z-index: 1;
+            top: 150px;
         }
 
         &--orizontal {
             width: 380px;
             height: 420px;
+            z-index: 0;
+            right: 0;
         }
     }
 }
 
 #block-servizi {
+    .text--row {
+        padding-top: 350px;
+        padding-left: 400px;
+    }
+
     .image {
         &--vertical {
             width: 300px;
             height: 414px;
+            z-index: 1;
+            left: 20px;
+            top: 130px;
         }
 
         &--orizontal {
             width: 820px;
             height: 320px;
+            z-index: 0;
         }
     }
 }
 
 #block-clienti {
+    .text--row {
+        padding-top: 350px;
+    }
+
     .image {
         &--vertical {
             width: 380px;
             height: 420px;
+            z-index: 1;
+            right: -100px;
+            top: 200px;
         }
 
         &--orizontal {
             width: 620px;
             height: 290px;
+            z-index: 0;
         }
     }
 }
