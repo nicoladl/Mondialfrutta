@@ -1,11 +1,11 @@
-@import '_normalize.scss';
-@import '_reset.scss';
-@import '_config.scss';
+@import 'base/_normalize.scss';
+@import 'base/_reset.scss';
+@import 'base/_config.scss';
 
-@import '_header.scss';
-@import '_visual.scss';
-@import '_hp-row.scss';
+@import 'layout/_header.scss';
+@import 'layout/_visual.scss';
+@import 'layout/_hp-row.scss';
 
-@import '_cta.scss';
-@import '_text.scss';
-@import '_title.scss';
+@import 'modules/_cta.scss';
+@import 'modules/_text.scss';
+@import 'modules/_title.scss';
