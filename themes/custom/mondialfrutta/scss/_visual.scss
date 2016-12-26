@@ -14,9 +14,13 @@
     }
 
     .video {
+        position:absolute;
+        width:100%;
+        overflow: hidden;
+
         &--fullscreen {
-            height: auto;
-            width: 100%;
+            min-width: 100%;
+            min-height: 100%;
         }
 
         &:after {
@@ -30,5 +34,13 @@
             height: 100%;
             background-color: rgba(0,0,0,0.5);
         }
+    }
+
+    .scroll-down {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
     }
 }
