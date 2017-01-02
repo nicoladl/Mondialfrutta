@@ -1,8 +1,9 @@
 .hp-row {
-    width: 880px;
-    height: 100vh;
+    width: 820px;
+    min-height: 100vh;
     margin: 0 auto;
     position: relative;
+    padding: 0 20px;
     padding-bottom: 10%;
 
     .image {
@@ -26,21 +27,25 @@
             height: 290px;
             z-index: 1;
             top: 150px;
+            left: 0;
         }
 
         &--orizontal {
             width: 380px;
             height: 420px;
             z-index: 0;
-            right: 0;
+            right: -30px;
         }
     }
 }
 
 #block-servizi {
+    .title {
+        padding-left: 50%;
+    }
     .text--row {
         padding-top: 350px;
-        padding-left: 400px;
+        padding-left: 50%;
     }
 
     .image {
@@ -53,10 +58,16 @@
         }
 
         &--orizontal {
-            width: 820px;
+            width: 860px;
             height: 320px;
+            left: 0;
             z-index: 0;
         }
+    }
+
+    .cta {
+        left: 50%;
+        position: relative;
     }
 }
 
@@ -70,14 +81,15 @@
             width: 380px;
             height: 420px;
             z-index: 1;
-            right: -100px;
-            top: 200px;
+            right: -80px;
+            top: 160px;
         }
 
         &--orizontal {
             width: 620px;
             height: 290px;
             z-index: 0;
+            left: 0;
         }
     }
 }

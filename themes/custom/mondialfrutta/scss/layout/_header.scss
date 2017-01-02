@@ -34,7 +34,8 @@ header {
         background-color: #fff;
         top: 0;
         right: -20vw;
-        transition: all 2s;
+        transition: all .5s;
+        border-left: 1px solid #c3c3c3;
     }
     .open { right: 0; }
 
