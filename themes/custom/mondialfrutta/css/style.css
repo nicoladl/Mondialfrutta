@@ -413,21 +413,31 @@ h1, h2, h3 {
 .overlay {
   background-color: transparent;
   position: fixed;
-  z-index: 2;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transition: all .5s; }
   .overlay.open {
-    background-color: rgba(0, 0, 0, 0.25); }
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 2; }
+
+.position--centered {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+.position--center {
+  text-align: center; }
 
 header {
   width: 100%;
   height: 80px;
   position: fixed;
   top: 0;
-  z-index: 200; }
+  z-index: 200;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all .5s; }
   header .headline__logo {
     top: 50%;
     left: 50%;
@@ -436,12 +446,64 @@ header {
   header .menu-icon {
     position: absolute;
     top: 50%;
-    right: 10px;
-    transform: translateY(-50%); }
+    right: 30px;
+    transform: translateY(-50%);
+    z-index: 1; }
     header .menu-icon__hamburger {
-      color: lime;
-      height: 100%;
+      width: 25px;
+      height: 17px;
+      position: relative;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
       cursor: pointer; }
+      header .menu-icon__hamburger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: #ED4225;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out; }
+        header .menu-icon__hamburger span:nth-child(1) {
+          top: 0px; }
+        header .menu-icon__hamburger span:nth-child(2), header .menu-icon__hamburger span:nth-child(3) {
+          top: 7px; }
+        header .menu-icon__hamburger span:nth-child(4) {
+          top: 14px; }
+      header .menu-icon__hamburger.open {
+        right: 30px; }
+      header .menu-icon__hamburger.open span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%; }
+      header .menu-icon__hamburger.open span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      header .menu-icon__hamburger.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
+      header .menu-icon__hamburger.open span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%; }
   header .menu-container {
     height: 100vh;
     width: 20vw;
@@ -449,8 +511,7 @@ header {
     background-color: #fff;
     top: 0;
     right: -20vw;
-    transition: all .5s;
-    border-left: 1px solid #c3c3c3; }
+    transition: all .5s; }
   header .open {
     right: 0; }
   header .menu {
@@ -523,7 +584,6 @@ header {
 
 .hp-row {
   width: 820px;
-  min-height: 100vh;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
@@ -581,6 +641,19 @@ header {
   height: 290px;
   z-index: 0;
   left: 0; }
+
+#block-prodotti .title {
+  padding-top: 200px; }
+#block-prodotti .image--left {
+  width: 501px;
+  height: 287px;
+  z-index: 0;
+  left: -190px; }
+#block-prodotti .image--right {
+  width: 333px;
+  height: 296px;
+  z-index: 0;
+  right: -40px; }
 
 .cta {
   background-color: #ED4225;

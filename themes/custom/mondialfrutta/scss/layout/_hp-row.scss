@@ -1,6 +1,5 @@
 .hp-row {
     width: 820px;
-    min-height: 100vh;
     margin: 0 auto;
     position: relative;
     padding: 0 20px;
@@ -90,6 +89,28 @@
             height: 290px;
             z-index: 0;
             left: 0;
+        }
+    }
+}
+
+#block-prodotti {
+    .title {
+        padding-top: 200px;
+    }
+
+    .image {
+        &--left {
+            width: 501px;
+            height: 287px;
+            z-index: 0;
+            left: -190px;
+        }
+
+        &--right {
+            width: 333px;
+            height: 296px;
+            z-index: 0;
+            right: -40px;
         }
     }
 }
