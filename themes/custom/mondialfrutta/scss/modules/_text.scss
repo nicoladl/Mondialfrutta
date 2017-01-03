@@ -5,7 +5,11 @@
     line-height: 25px;
 
     &--row {
-        width: 50%;
         padding-bottom: 50px;
+        padding-top: 50px;
+
+    	@include mq($from: tablet) {
+        	width: 50%;
+        }
     }
 }

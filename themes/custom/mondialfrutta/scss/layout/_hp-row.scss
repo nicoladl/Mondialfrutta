@@ -1,116 +1,164 @@
 .hp-row {
-    width: 820px;
     margin: 0 auto;
     position: relative;
     padding: 0 20px;
     padding-bottom: 10%;
 
     .image {
-        position: absolute;
+        @include mq($from: tablet) {
+            position: absolute;
+        }
 
         img {
             width: 100%;
             height: 100%;
         }
     }
+    @include mq($from: tablet) {
+        width: 820px;
+    }
 }
 
 #block-azienda {
     .text--row {
-        padding-top: 400px;
+        @include mq($from: tablet) {
+            padding-top: 400px;
+        }
     }
 
     .image {
+
         &--vertical {
-            width: 540px;
-            height: 290px;
-            z-index: 1;
-            top: 150px;
-            left: 0;
+            @include mq($from: tablet) {
+                width: 540px;
+                height: 290px;
+                z-index: 1;
+                top: 150px;
+                left: 0;
+            }
         }
 
         &--orizontal {
-            width: 380px;
-            height: 420px;
-            z-index: 0;
-            right: -30px;
+            display: none;
+
+            @include mq($from: tablet) {
+                display: block;
+                width: 380px;
+                height: 420px;
+                z-index: 0;
+                right: -30px;
+            }
         }
     }
 }
 
 #block-servizi {
     .title {
-        padding-left: 50%;
+        @include mq($from: tablet) {
+            padding-left: 50%;
+        }
     }
     .text--row {
-        padding-top: 350px;
-        padding-left: 50%;
+        @include mq($from: tablet) {
+            padding-top: 350px;
+        }
+
+        @include mq($from: tablet) {
+            padding-left: 50%;
+        }
     }
 
     .image {
         &--vertical {
-            width: 300px;
-            height: 414px;
-            z-index: 1;
-            left: 20px;
-            top: 130px;
+            display: none;
+
+            @include mq($from: tablet) {
+                display: block;
+                width: 300px;
+                height: 414px;
+                z-index: 1;
+                left: 20px;
+                top: 130px;
+            }
         }
 
         &--orizontal {
-            width: 860px;
-            height: 320px;
-            left: 0;
-            z-index: 0;
+            @include mq($from: tablet) {
+                width: 860px;
+                height: 320px;
+                left: 0;
+                z-index: 0;
+            }
         }
     }
 
     .cta {
-        left: 50%;
-        position: relative;
+        @include mq($from: tablet) {
+            left: 50%;
+            position: relative;
+        }
     }
 }
 
 #block-clienti {
     .text--row {
-        padding-top: 350px;
+        @include mq($from: tablet) {
+            padding-top: 350px;
+        }
     }
 
     .image {
         &--vertical {
-            width: 380px;
-            height: 420px;
-            z-index: 1;
-            right: -80px;
-            top: 160px;
+            display: none;
+
+            @include mq($from: tablet) {
+                display: block;
+                width: 380px;
+                height: 420px;
+                z-index: 1;
+                right: -80px;
+                top: 160px;
+            }
         }
 
         &--orizontal {
-            width: 620px;
-            height: 290px;
-            z-index: 0;
-            left: 0;
+            @include mq($from: tablet) {
+                width: 620px;
+                height: 290px;
+                z-index: 0;
+                left: 0;
+            }
         }
     }
 }
 
 #block-prodotti {
     .title {
-        padding-top: 200px;
+        @include mq($from: tablet) {
+            padding-top: 200px;
+        }
     }
 
     .image {
         &--left {
-            width: 501px;
-            height: 287px;
-            z-index: 0;
-            left: -190px;
+            display: none;
+
+            @include mq($from: tablet) {
+                display: block;
+                width: 501px;
+                height: 287px;
+                z-index: 0;
+                left: -190px;
+            }
         }
 
         &--right {
-            width: 333px;
-            height: 296px;
-            z-index: 0;
-            right: -40px;
+            @include mq($from: tablet) {
+                width: 333px;
+                height: 296px;
+                z-index: 0;
+                right: -40px;
+            }
         }
     }
 }
