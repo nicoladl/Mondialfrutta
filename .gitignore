@@ -44,3 +44,5 @@ core/phpunit.xml
 
 **/*/*.log
 **/*/.sass-cache
+*.sublime-project
+*.sublime-workspace
