@@ -42,6 +42,8 @@ sites/simpletest
 core/phpcs.xml
 core/phpunit.xml
 
+**/*/*.css
+
 **/*/*.log
 **/*/.sass-cache
 *.sublime-project
