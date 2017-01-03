@@ -59,9 +59,38 @@
 
     .scroll-down {
         position: absolute;
-        bottom: 10px;
+        bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $mondialfruttaRed;
         cursor: pointer;
+        transition: all .5s;
+
+        &:hover {
+            background-color: $mondialfruttaRedHover;
+        }
+
+        svg {
+            position: absolute;
+            left: 30%;
+            top: 25%;
+            transform: translate(-50%);
+            animation-name: arrow;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes arrow {
+            0% {transform: translateY(0);}
+            52% {transform: translateY(0);}
+            64% {transform: translateY(.33333rem);}
+            76% {transform: translateY(0);}
+            88% {transform: translateY(.33333rem);}
+            100% {transform: translateY(0);}
+        }
     }
 }

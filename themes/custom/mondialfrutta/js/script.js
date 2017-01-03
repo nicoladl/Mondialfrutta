@@ -6,6 +6,12 @@
         $('.overlay').toggleClass('open');
     });
 
+    $('.js-scroll-down').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $('#block-azienda').offset().top
+        }, 500);
+    });
+
     $(window).scroll(function() {
         if ( $(window).scrollTop() > $('.visual').height() ) {
             $('header').addClass('open');
