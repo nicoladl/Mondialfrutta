@@ -599,6 +599,7 @@ header {
     top: 50%;
     opacity: 1; } }
   .visual .video {
+    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
