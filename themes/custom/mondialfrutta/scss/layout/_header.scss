@@ -5,10 +5,19 @@ header {
     top: 0;
     z-index: 200;
     background-color: rgba(255,255,255,0);
-    transition: all .5s;
+    opacity: 0;
+    transition: all .5s ease-out;
+    animation-name: showingFade;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
 
-    &.open {
-        //background-color: rgba(255,255,255,1);
+    @keyframes showingFade {
+        100% {
+            opacity: 1;
+        }
     }
 
     .headline {
@@ -26,20 +35,50 @@ header {
         right: 30px;
         transform: translateY(-50%);
         z-index: 1;
+        overflow: hidden;
 
         &__hamburger {
             width: 25px;
             height: 17px;
             position: relative;
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
             transform: rotate(0deg);
-            -webkit-transition: .5s ease-in-out;
-            -moz-transition: .5s ease-in-out;
-            -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
             cursor: pointer;
+
+            &:hover:not(.open) {
+                span {
+                    left: 25px;
+                    opacity: 0;
+                    animation-name: showingMenu;
+                    animation-duration: .2s;
+                    animation-iteration-count: 1;
+                    animation-timing-function: ease-out;
+                    animation-fill-mode: forwards;
+
+                    &:nth-child(1){
+                        animation-delay: .4s
+                    }
+
+                    &:nth-child(2){
+                        animation-delay: .45s
+                    }
+
+                    &:nth-child(3){
+                        animation-delay: .45s
+                    }
+
+                    &:nth-child(4){
+                        animation-delay: .5s
+                    }
+                }
+            }
+
+            @keyframes showingMenu {
+                100% { 
+                    opacity: 1;
+                    left: 0; 
+                }
+            }
 
             span {
                 display: block;
@@ -49,14 +88,9 @@ header {
                 background-color: $mondialfruttaRed;
                 opacity: 1;
                 left: 0;
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
                 transform: rotate(0deg);
-                -webkit-transition: .25s ease-in-out;
-                -moz-transition: .25s ease-in-out;
-                -o-transition: .25s ease-in-out;
                 transition: .25s ease-in-out;
+                transition: all .5s;
 
                 &:nth-child(1) {
                     top: 0px;
@@ -112,7 +146,10 @@ header {
         right: -280px;
         transition: all .5s;
     }
-    .open { right: 0; }
+    .open { 
+        right: 0;
+        overflow: visible; 
+    }
 
     .menu {
         font-family: 'Montserrat', sans-serif;
@@ -125,12 +162,41 @@ header {
             list-style: none;
             font-size: 1em;
             letter-spacing: 1px;
-            margin: 25px 0;
+            height: 30px;
+            margin: 15px 0;
+            overflow: hidden;
+            position: relative;
 
             a {
                 color: $mondialfruttaRed;
                 text-transform: uppercase;
                 text-decoration: none;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+                transition: all .5s ease-out;
+
+                &:before {
+                    content: '';
+                    width: 26px;
+                    height: 14px;
+                    background-image: url('../images/leaf.png');
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%) scale(0.5, 1);
+                    z-index: -1;
+                    transition: all .2s ease-out;
+                }
+
+                &:hover {
+                    &:before {
+                        bottom: 100%;
+                        transform: translate(-50%) scale(1, 1);
+                    }
+                }
             }
         }
     }

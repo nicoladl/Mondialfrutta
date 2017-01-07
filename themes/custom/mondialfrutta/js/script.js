@@ -37,23 +37,64 @@
     // When the page scrolls...
     window.addEventListener("scroll", function(e) {
 
-      // What % down is it?
-      var scrollPercentage = ( (document.documentElement.scrollTop + document.body.scrollTop) - $('.visual').height() ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+        // What % down is it?
+        var scrollPercentage = ( (document.documentElement.scrollTop + document.body.scrollTop) - $('.visual').height() ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
-      // Length to offset the dashes
-      var drawLength = pathLength * (scrollPercentage * 1.5);
+        // Length to offset the dashes
+        var drawLength = pathLength * (scrollPercentage * 1.5);
 
-      // Draw in reverse
-      path.style.strokeDashoffset = pathLength - drawLength;
+        // Draw in reverse
+        path.style.strokeDashoffset = pathLength - drawLength;
 
-      // ... at bottom of scrolling function
+        // ... at bottom of scrolling function
 
-      // When complete, remove the dash array, otherwise shape isn't quite sharp
-      if (scrollPercentage >= 0.99) {
-        path.style.strokeDasharray = "none";
-      } else {
-        path.style.strokeDasharray = pathLength + ' ' + pathLength;
-      }
-
+        // When complete, remove the dash array, otherwise shape isn't quite sharp
+        if (scrollPercentage >= 0.99) {
+            path.style.strokeDasharray = "none";
+        } else {
+            path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        }
     });
+
+    // check if  element is on viewport
+    $.fn.isOnScreen = function(){
+        
+        var win = $(window);
+        var viewport = {
+            top : win.scrollTop()-100,
+            left : win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+        
+        var bounds = this.offset();
+        bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+        
+        return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    };
+
+    $(window).scroll(function() {
+        $('.image').each(function( index ) {
+            var $this = $(this);
+            if ( $this.isOnScreen() ) {
+                $this.addClass('js-effect');
+
+                if ( $this.parent().parent().attr('id') === 'block-servizi' ) {
+
+                    var firstTop = $this.offset().top,
+                        winScrollTop = $(window).scrollTop(),
+                        shiftDistance = (firstTop - winScrollTop);
+
+                    if ( $this.hasClass('image--vertical') ) {
+                        $(this).first().css("transform","translateY("+shiftDistance*0.12+"px)");
+                    } else if ( $this.hasClass('image--orizontal') ) {
+                        $(this).last().css("transform","translateY("+shiftDistance*0.06+"px)");
+                    }
+                    
+                }
+            }
+        });
+    });
+
 })(jQuery);
