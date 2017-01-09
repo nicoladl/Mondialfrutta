@@ -88,9 +88,9 @@
                         shiftDistance = (firstTop - winScrollTop);
 
                     if ( $this.hasClass('image--vertical') ) {
-                        $(this).first().css("transform","translateY("+shiftDistance*0.12+"px)");
+                        $(this).first().css("transform","translateY("+shiftDistance*0.24+"px)");
                     } else if ( $this.hasClass('image--orizontal') ) {
-                        $(this).last().css("transform","translateY("+shiftDistance*0.06+"px)");
+                        $(this).last().css("transform","translateY(-"+shiftDistance*0.06+"px)");
                     }
                     
                 }
