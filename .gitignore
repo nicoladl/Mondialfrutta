@@ -43,6 +43,7 @@ core/phpcs.xml
 core/phpunit.xml
 
 **/*/*.css
+*.sql
 
 **/*/*.log
 **/*/.sass-cache
