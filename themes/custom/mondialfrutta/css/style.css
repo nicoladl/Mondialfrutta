@@ -420,7 +420,7 @@ h1, h2, h3 {
   height: 100%;
   transition: all .5s; }
   .overlay.open {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2; }
 
 .position--centered {
@@ -651,16 +651,16 @@ header {
   #block-azienda .text--row {
     padding-top: 400px; } }
 @media (min-width: 49.33333em) {
-  #block-azienda .image--vertical {
+  #block-azienda .image--orizontal {
     width: 540px;
     height: 290px;
     z-index: 1;
     top: 150px;
     left: 0; } }
-#block-azienda .image--orizontal {
+#block-azienda .image--vertical {
   display: none; }
   @media (min-width: 49.33333em) {
-    #block-azienda .image--orizontal {
+    #block-azienda .image--vertical {
       display: block;
       width: 380px;
       height: 420px;
@@ -824,47 +824,25 @@ header {
   font-size: 42px;
   letter-spacing: 1px; }
 
-#block-azienda .image {
+#block-azienda .image, #block-clienti .image, #block-servizi .image {
   overflow: hidden; }
-  #block-azienda .image--vertical:after {
-    background-color: #ccc; }
-  #block-azienda .image--orizontal:after {
-    background-color: #ddd; }
-  #block-azienda .image:after {
-    content: '';
-    width: 200%;
-    height: 100%;
-    top: 0;
-    left: -40%;
-    position: absolute;
-    z-index: 5;
-    transform: skewX(-20deg);
-    transition: all 1s ease-in; }
-  #block-azienda .image.js-effect:after {
-    left: 200%; }
-
-#block-servizi .image {
-  overflow: hidden; }
-
-#block-clienti .image {
-  overflow: hidden; }
-  #block-clienti .image img {
+  #block-azienda .image img, #block-clienti .image img, #block-servizi .image img {
     position: absolute;
     opacity: 0;
-    transition: all .7s ease-out; }
-  #block-clienti .image--vertical {
-    background-color: #ccc; }
-    #block-clienti .image--vertical img {
-      left: -100%;
+    transition: all 1s cubic-bezier(0.13, 0.62, 0.66, 0.86); }
+  #block-azienda .image--vertical, #block-clienti .image--vertical, #block-servizi .image--vertical {
+    background-color: transparent; }
+    #block-azienda .image--vertical img, #block-clienti .image--vertical img, #block-servizi .image--vertical img {
+      left: 100%;
       opacity: 1; }
-  #block-clienti .image--orizontal {
-    background-color: #ddd; }
-    #block-clienti .image--orizontal img {
-      right: -100%;
+  #block-azienda .image--orizontal, #block-clienti .image--orizontal, #block-servizi .image--orizontal {
+    background-color: transparent; }
+    #block-azienda .image--orizontal img, #block-clienti .image--orizontal img, #block-servizi .image--orizontal img {
+      right: 100%;
       opacity: 1; }
-  #block-clienti .image.js-effect.image--vertical img {
+  #block-azienda .image.js-effect.image--vertical img, #block-clienti .image.js-effect.image--vertical img, #block-servizi .image.js-effect.image--vertical img {
     left: 0; }
-  #block-clienti .image.js-effect.image--orizontal img {
+  #block-azienda .image.js-effect.image--orizontal img, #block-clienti .image.js-effect.image--orizontal img, #block-servizi .image.js-effect.image--orizontal img {
     right: 0; }
 
 .scroll-down {
