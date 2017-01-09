@@ -79,21 +79,17 @@
             var $this = $(this);
             if ( $this.isOnScreen() ) {
                 $this.addClass('js-effect');
-            }
 
-            if ( $this.parent().parent().attr('id') === 'block-servizi' ) {
+                var firstTop = $this.offset().top,
+                    winScrollTop = $(window).scrollTop(),
+                    shiftDistance = (firstTop - winScrollTop);
 
-                    var firstTop = $this.offset().top,
-                        winScrollTop = $(window).scrollTop(),
-                        shiftDistance = (firstTop - winScrollTop);
-
-                    if ( $this.hasClass('image--vertical') ) {
-                        $(this).first().css("transform","translateY("+shiftDistance*0.24+"px)");
-                    } else if ( $this.hasClass('image--orizontal') ) {
-                        $(this).last().css("transform","translateY(-"+shiftDistance*0.06+"px)");
-                    }
-                    
+                if ( $this.hasClass('image--vertical') ) {
+                    $(this).first().css("transform","translateY("+shiftDistance*0.12+"px)");
+                } else if ( $this.hasClass('image--orizontal') ) {
+                    $(this).last().css("transform","translateY(-"+shiftDistance*0.06+"px)");
                 }
+            }
         });
     });
 

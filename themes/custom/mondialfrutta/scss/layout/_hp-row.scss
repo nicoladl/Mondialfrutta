@@ -28,7 +28,7 @@
 
     .image {
 
-        &--vertical {
+        &--orizontal {
             @include mq($from: tablet) {
                 width: 540px;
                 height: 290px;
@@ -38,7 +38,7 @@
             }
         }
 
-        &--orizontal {
+        &--vertical {
             display: none;
 
             @include mq($from: tablet) {

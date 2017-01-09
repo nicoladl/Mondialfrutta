@@ -1,67 +1,25 @@
-#block-azienda {
-	.image {
-		overflow: hidden;
-
-		&--vertical {
-			&:after {
-		    	background-color: #ccc;
-			}
-		}
-
-		&--orizontal {
-			&:after {
-		    	background-color: #ddd;
-			}
-		}
-
-		&:after {
-			content: '';
-			width: 200%;
-		    height: 100%;
-		    top: 0;
-		    left: -40%;
-		    position: absolute;
-		    z-index: 5;
-		    transform: skewX(-20deg);
-		    transition: all 1s ease-in;
-		}
-
-		&.js-effect {
-			&:after {
-				left: 200%
-			}
-		}
-	}
-}
-
-#block-servizi {
-	.image {
-		overflow: hidden;
-	}
-}
-
-#block-clienti {
+#block-azienda, #block-clienti, #block-servizi {
 	.image {
 		overflow: hidden;
 
 		img {
 			position: absolute;
 			opacity: 0;
-			transition: all .7s ease-out;
+			transition: all 1s cubic-bezier(.13,.62,.66,.86);
 		}
 
 		&--vertical {
-			background-color: #ccc;
+			background-color: transparent;
 			img {
-				left: -100%;
+				left: 100%;
 				opacity: 1;
 			}
 		}
 
 		&--orizontal {
-			background-color: #ddd;
+			background-color: transparent;
 			img {
-				right: -100%;
+				right: 100%;
 				opacity: 1;
 			}
 		}
