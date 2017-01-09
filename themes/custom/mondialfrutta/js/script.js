@@ -79,8 +79,9 @@
             var $this = $(this);
             if ( $this.isOnScreen() ) {
                 $this.addClass('js-effect');
+            }
 
-                if ( $this.parent().parent().attr('id') === 'block-servizi' ) {
+            if ( $this.parent().parent().attr('id') === 'block-servizi' ) {
 
                     var firstTop = $this.offset().top,
                         winScrollTop = $(window).scrollTop(),
@@ -93,7 +94,6 @@
                     }
                     
                 }
-            }
         });
     });
 
