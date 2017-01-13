@@ -467,26 +467,8 @@ header {
       transform: rotate(0deg);
       transition: .5s ease-in-out;
       cursor: pointer; }
-      header .menu-icon__hamburger:hover:not(.open) span {
-        left: 25px;
-        opacity: 0;
-        animation-name: showingMenu;
-        animation-duration: .2s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards; }
-        header .menu-icon__hamburger:hover:not(.open) span:nth-child(1) {
-          animation-delay: 0.4s; }
-        header .menu-icon__hamburger:hover:not(.open) span:nth-child(2) {
-          animation-delay: 0.45s; }
-        header .menu-icon__hamburger:hover:not(.open) span:nth-child(3) {
-          animation-delay: 0.45s; }
-        header .menu-icon__hamburger:hover:not(.open) span:nth-child(4) {
-          animation-delay: 0.5s; }
-@keyframes showingMenu {
-  100% {
-    opacity: 1;
-    left: 0; } }
+      header .menu-icon__hamburger:hover span {
+        background-color: #C02A11; }
       header .menu-icon__hamburger span {
         display: block;
         position: absolute;
@@ -573,6 +555,8 @@ header {
         header .menu .menu-item a:hover:before {
           bottom: 100%;
           transform: translate(-50%) scale(1, 1); }
+  header.open {
+    background-color: rgba(255, 255, 255, 0.9); }
 
 .visual {
   height: 100vh;
@@ -833,17 +817,15 @@ header {
   #block-azienda .image--vertical, #block-clienti .image--vertical, #block-servizi .image--vertical {
     background-color: transparent; }
     #block-azienda .image--vertical img, #block-clienti .image--vertical img, #block-servizi .image--vertical img {
-      left: 100%;
+      left: -100%;
       opacity: 1; }
-  #block-azienda .image--orizontal, #block-clienti .image--orizontal, #block-servizi .image--orizontal {
-    background-color: transparent; }
-    #block-azienda .image--orizontal img, #block-clienti .image--orizontal img, #block-servizi .image--orizontal img {
-      right: 100%;
-      opacity: 1; }
+  #block-azienda .image--orizontal img, #block-clienti .image--orizontal img, #block-servizi .image--orizontal img {
+    opacity: 1; }
   #block-azienda .image.js-effect.image--vertical img, #block-clienti .image.js-effect.image--vertical img, #block-servizi .image.js-effect.image--vertical img {
     left: 0; }
-  #block-azienda .image.js-effect.image--orizontal img, #block-clienti .image.js-effect.image--orizontal img, #block-servizi .image.js-effect.image--orizontal img {
-    right: 0; }
+
+#block-servizi .image--vertical img {
+  left: 100%; }
 
 .scroll-down {
   position: absolute;
@@ -854,7 +836,7 @@ header {
   height: 40px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #ED4225;
   cursor: pointer;
   opacity: 0;
   transition: all .5s;
@@ -888,7 +870,7 @@ header {
     position: absolute;
     top: -2px;
     left: -2px;
-    stroke: #fff;
+    stroke: #ED4225;
     stroke-width: 0;
     fill: none; }
 @keyframes rotateUp {
