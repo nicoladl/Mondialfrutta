@@ -6,6 +6,8 @@ logs/*.pid
 .git
 .idea
 .svn
+.htaccess
+/sites/default/files/.htaccess
 .htaccess-basic-auth
 .htaccess-no-basic-auth
 static
