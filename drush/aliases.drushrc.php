@@ -308,63 +308,27 @@
  * Some examples appear below.  Remove the leading hash signs to enable.
  */
 
-$aliases["dev"] = array (
+$aliases['local'] = [
   'root' => '/Users/ndelazzari/project/PERSONALE/MondialfruttaD8',
-  'uri' => 'http://default',
+  'uri' => 'http://mondialfruttad8.dev/',
+  'command-specific' => [
+    'rsync' => [
+      'mode' => 'rlcDz',
+      'exclude-files' => TRUE,
+      'exclude-from' => './exclude-list.txt',
+      'delete' => TRUE,
+    ],
+  ],
   'path-aliases' => 
-  array (
-    '%drush' => '/usr/local/bin',
-    '%site' => 'sites/default/',
-  ),
-  'databases' => 
-  array (
-    'default' => 
     array (
-      'default' => 
-      array (
-        'database' => 'mondialfruttaD8',
-        'username' => 'root',
-        'password' => 'root',
-        'prefix' => 
-        array (
-          'default' => '',
-        ),
-        'host' => 'localhost',
-        'port' => '3306',
-        'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-        'driver' => 'mysql',
-      ),
-    ),
-  ),
-);
+      '%drush' => '/usr/local/bin',
+      '%site' => 'sites/default/',
+    )
+];
 
-$aliases['stage'] = array(
-   'uri' => 'http://nicoladelazzari.it/demo',
-   'root' => '/customers/4/e/d/nicoladelazzari.it/httpd.www/demo',
-   'remote-host' => 'ssh.nicoladelazzari.it',
-   'remote-user' => 'nicoladelazzari.it',
-   'path-aliases' => array(
-      '%drush' => '/home/nicoladelazzari.it/bin',
-      '%drush-script' => '/home/nicoladelazzari.it/bin/drush'
-     ),
-   'databases' => 
-  array (
-    'default' => 
-    array (
-      'default' => 
-      array (
-        'database' => 'nicoladelazzari_it_mondialfrutta_dev',
-        'username' => 'nicoladelazzari_it_mondialfrutta_dev',
-        'password' => 'Ronaldo10!',
-        'prefix' => 
-        array (
-          'default' => '',
-        ),
-        'host' => 'nicoladelazzari.it.mysql',
-        'port' => '3306',
-        'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-        'driver' => 'mysql',
-      ),
-    ),
-  ),
- );
+$aliases['dev'] = [
+  'uri' => 'http://nicoladelazzari.it/demo',
+  'root' => '/customers/4/e/d/nicoladelazzari.it/httpd.www/demo',
+  'remote-host' => 'ssh.nicoladelazzari.it',
+  'remote-user' => 'nicoladelazzari.it'
+];
