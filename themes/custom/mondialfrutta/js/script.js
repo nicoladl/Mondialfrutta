@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict";
+    'use strict';
 
     $('.js-hamburger').on('click', function() {
         $('.js-menu-container, .js-hamburger').toggleClass('open');
@@ -35,7 +35,7 @@
     path.style.strokeDashoffset = pathLength;
 
     // When the page scrolls...
-    window.addEventListener("scroll", function(e) {
+    window.addEventListener('scroll', function(e) {
 
         // What % down is it?
         var scrollPercentage = ( (document.documentElement.scrollTop + document.body.scrollTop) - $('.visual').height() ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
@@ -50,7 +50,7 @@
 
         // When complete, remove the dash array, otherwise shape isn't quite sharp
         if (scrollPercentage >= 0.99) {
-            path.style.strokeDasharray = "none";
+            path.style.strokeDasharray = 'none';
         } else {
             path.style.strokeDasharray = pathLength + ' ' + pathLength;
         }
@@ -61,7 +61,7 @@
         
         var win = $(window);
         var viewport = {
-            top : win.scrollTop()-100,
+            top : win.scrollTop()+100,
             left : win.scrollLeft()
         };
         viewport.right = viewport.left + win.width();
@@ -74,6 +74,9 @@
         return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
     };
 
+    const offsetOrizontal = 0.6;
+    const offsetVertical = 0.4;
+
     $(window).scroll(function() {
         $('.image').each(function( index ) {
             var $this = $(this);
@@ -84,11 +87,17 @@
                     winScrollTop = $(window).scrollTop(),
                     shiftDistance = (firstTop - winScrollTop);
 
+                var percentageOrizontal = (($this.height() + shiftDistance)/($(window).height()/100))*offsetOrizontal;
+                var percentageVertical = (($this.height() + shiftDistance)/($(window).height()/100))*offsetVertical;
+
                 if ( $this.hasClass('image--vertical') ) {
-                    $(this).first().css("transform","translateY("+shiftDistance*0.12+"px)");
+                    $this.css('background-position', 'center '+percentageVertical+'%');
                 } else if ( $this.hasClass('image--orizontal') ) {
-                    $(this).last().css("transform","translateY(-"+shiftDistance*0.06+"px)");
+
+                    $this.css('background-position', 'center '+percentageOrizontal+'%');
                 }
+            } else {
+                $this.css('background-position', 'center 50%');
             }
         });
     });

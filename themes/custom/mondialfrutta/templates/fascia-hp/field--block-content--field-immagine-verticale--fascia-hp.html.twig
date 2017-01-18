@@ -45,5 +45,5 @@
 %}
 
 {% for item in items %}
-    <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
+    <div{{ attributes.addClass(classes) }} style="background-image: url('{{ file_url(element['#object'].field_immagine_verticale.0.entity.uri.value) }}')"></div>
 {% endfor %}
