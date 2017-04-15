@@ -1,0 +1,27 @@
+.views-row {
+  width: 100%;
+  height: 200px;
+}
+
+.views-field {
+  float: left;
+
+  .title-prodotto {
+    width: 100px;
+  }
+
+  .image-prodotto {
+    width: 100px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  img {
+    width: 20px;
+    height: auto;
+  }
+}
