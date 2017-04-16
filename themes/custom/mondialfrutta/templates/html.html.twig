@@ -40,19 +40,25 @@
     <js-placeholder token="{{ placeholder_token }}">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <a href="#main-content" class="visually-hidden focusable skip-link">
-      {{ 'Skip to main content'|t }}
-    </a>
     {{ page_top }}
+
+    <div class="overlay"></div>
+    <header role="banner">
+      {{ page.header }}
+    </header>
+
+    {% include directory ~ '/includes/header.html.twig' %}
+
     {{ page }}
+
+    {% if page.footer %}
+      {% include directory ~ '/includes/footer.html.twig' %}
+    {% endif %}
+
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>

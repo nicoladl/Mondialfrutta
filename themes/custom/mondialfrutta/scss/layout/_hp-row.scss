@@ -9,18 +9,18 @@
         //background-repeat: no-repeat;
         transition: background-position 0s linear;
 
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             position: absolute;
         }
     }
-    @include mq($from: tablet) {
+    @include mq($from: medium) {
         width: 820px;
     }
 }
 
 #block-azienda {
     .text--row {
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             padding-top: 400px;
         }
     }
@@ -28,7 +28,7 @@
     .image {
 
         &--orizontal {
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 width: 540px;
                 height: 290px;
                 z-index: 1;
@@ -40,7 +40,7 @@
         &--vertical {
             display: none;
 
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 display: block;
                 width: 380px;
                 height: 420px;
@@ -53,16 +53,16 @@
 
 #block-servizi {
     .title {
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             padding-left: 50%;
         }
     }
     .text--row {
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             padding-top: 350px;
         }
 
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             padding-left: 50%;
         }
     }
@@ -71,7 +71,7 @@
         &--vertical {
             display: none;
 
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 display: block;
                 width: 300px;
                 height: 414px;
@@ -82,7 +82,7 @@
         }
 
         &--orizontal {
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 width: 860px;
                 height: 320px;
                 left: 0;
@@ -92,7 +92,7 @@
     }
 
     .cta {
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             left: 50%;
             position: relative;
         }
@@ -101,7 +101,7 @@
 
 #block-clienti {
     .text--row {
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             padding-top: 350px;
         }
     }
@@ -110,7 +110,7 @@
         &--vertical {
             display: none;
 
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 display: block;
                 width: 380px;
                 height: 420px;
@@ -121,7 +121,7 @@
         }
 
         &--orizontal {
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 width: 620px;
                 height: 290px;
                 z-index: 0;
@@ -133,7 +133,7 @@
 
 #block-prodotti {
     .title {
-        @include mq($from: tablet) {
+        @include mq($from: medium) {
             padding-top: 200px;
         }
     }
@@ -142,7 +142,7 @@
         &--left {
             display: none;
 
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 display: block;
                 width: 501px;
                 height: 287px;
@@ -152,7 +152,7 @@
         }
 
         &--right {
-            @include mq($from: tablet) {
+            @include mq($from: medium) {
                 width: 333px;
                 height: 296px;
                 z-index: 0;

@@ -8,7 +8,7 @@
         padding-bottom: 50px;
         padding-top: 50px;
 
-    	@include mq($from: tablet) {
+    	@include mq($from: medium) {
         	width: 50%;
         }
     }

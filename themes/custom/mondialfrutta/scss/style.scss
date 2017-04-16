@@ -1,9 +1,13 @@
-@import 'base/_mq.scss';
 @import 'base/_normalize.scss';
 @import 'base/_reset.scss';
 @import 'base/_config.scss';
+@import 'base/_mq.scss';
+@import 'base/_layers-bp.scss';
+@import 'base/_layers-core.scss';
 
 @import 'layout/_body.scss';
+@import 'layout/_layout-container.scss';
+@import 'layout/_wrapper.scss';
 @import 'layout/_header.scss';
 @import 'layout/_visual.scss';
 @import 'layout/_hp-row.scss';

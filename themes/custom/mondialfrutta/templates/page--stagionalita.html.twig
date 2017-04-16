@@ -42,40 +42,26 @@
  * @see html.html.twig
  */
 #}
+{# {% include directory ~ '/includes/header.html.twig' %} #}
 
 <div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
-
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+    <div class="row wrapper">
+      <div class="column large-full">
+        <div class="header">
+          <h3 class="title">Stagionalità</h3>
+          <img src="/sites/default/files/hp/prodotti-left_1.png" width="501" height="287" alt="prodotti">
+        </div>
+      </div>
+    </div>
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+    <div class="row wrapper">
+      <div class="column large-full">
+        {{ page.content }}
+      </div>
+    </div>
 
   </main>
 
