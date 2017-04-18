@@ -49,7 +49,7 @@ class MigrateUpgrade6Test extends MigrateUpgradeTestBase {
       'image_style' => 5,
       'language_content_settings' => 2,
       'migration' => 105,
-      'node' => 10,
+      'node' => 11,
       'node_type' => 11,
       'rdf_mapping' => 5,
       'search_page' => 2,
@@ -58,7 +58,7 @@ class MigrateUpgrade6Test extends MigrateUpgradeTestBase {
       'action' => 22,
       'menu' => 8,
       'taxonomy_term' => 6,
-      'taxonomy_vocabulary' => 6,
+      'taxonomy_vocabulary' => 5,
       'tour' => 4,
       'user' => 7,
       'user_role' => 6,
@@ -76,7 +76,7 @@ class MigrateUpgrade6Test extends MigrateUpgradeTestBase {
   /**
    * Executes all steps of migrations upgrade.
    */
-  protected function testMigrateUpgrade() {
+  public function testMigrateUpgrade() {
     parent::testMigrateUpgrade();
 
     // Ensure migrated users can log in.
