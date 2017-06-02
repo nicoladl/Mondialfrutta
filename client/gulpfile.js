@@ -33,7 +33,7 @@ gulp.task('styles', function() {
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(sass())
         .pipe(prefix())
-        .pipe(gulp.dest('../docroot/themes/custom/etinerary_theme/assets/css'))
+        .pipe(gulp.dest('../docroot/themes/custom/mondialfrutta/css'))
         .pipe(browserSync.stream());
 });
 
@@ -48,7 +48,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     gulp.src('js/**/*.js')
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .pipe(gulp.dest('../docroot/themes/custom/etinerary_theme/assets/js'))
+        .pipe(gulp.dest('../docroot/themes/custom/mondialfrutta/js'))
         .pipe(browserSync.stream());
 });
 
@@ -60,7 +60,7 @@ gulp.task('scripts', function() {
  **/
 gulp.task('fonts', function() {
     gulp.src('fonts/*')
-        .pipe(gulp.dest('../docroot/themes/custom/etinerary_theme/assets/fonts'));
+        .pipe(gulp.dest('../docroot/themes/custom/mondialfrutta/fonts'));
 });
 
 
@@ -71,9 +71,9 @@ gulp.task('fonts', function() {
 *
 **/
 gulp.task('images', function () {
-    del.sync(['../docroot/themes/custom/etinerary_theme/assets/img/**'], {force: true});
-    gulp.src('img/**/*.*')
-        .pipe(gulp.dest('../docroot/themes/custom/etinerary_theme/assets/img'))
+    del.sync(['../docroot/themes/custom/mondialfrutta/images/**'], {force: true});
+    gulp.src('images/**/*.*')
+        .pipe(gulp.dest('../docroot/themes/custom/mondialfrutta/images'))
 });
 
 
@@ -97,7 +97,7 @@ gulp.task('svgstore', function() {
             inlineSvg: true
         }))
         .pipe(rename('_svgsprite.html.twig'))
-        .pipe(gulp.dest('../docroot/themes/custom/etinerary_theme/assets/svg-sprite'))
+        .pipe(gulp.dest('../docroot/themes/custom/mondialfrutta/svg-sprite'))
 });
 
 
@@ -106,9 +106,14 @@ gulp.task('svgstore', function() {
 * Watch assets
 **/
 gulp.task('watch', function() {
-    gulp.watch('scss/**/*.scss', ['styles']);
-    gulp.watch('js/**/*.js', ['scripts']);
-    gulp.watch('img/**/*.*', ['images']);
+
+  browserSync.init({
+    server: webPath + '/'
+  });
+
+  gulp.watch(basePath + '/sass/**/*.scss', ['style']).on('change', browserSync.reload);
+  gulp.watch(basePath + '/script/**/*.js', ['script']).on('change', browserSync.reload);
+  gulp.watch(basePath + '/img/**/*', ['images']).on('change', browserSync.reload);
 });
 
 

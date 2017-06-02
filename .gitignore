@@ -27,5 +27,11 @@ docroot/modules/contrib/examples/
 # ingore private files
 /private_files
 
+# theme assets
+docroot/themes/custom/mondialfrutta/css
+docroot/themes/custom/mondialfrutta/js
+docroot/themes/custom/mondialfrutta/images
+
 .sass-cache/
 *.css.map
+*/node_modules
