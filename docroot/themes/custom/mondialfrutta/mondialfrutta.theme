@@ -1,0 +1,8 @@
+<?php
+
+function mondialfrutta_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+	$theNode = \Drupal::request()->attributes->get('node');
+	if ($theNode && isset($variables['elements']['name']) && isset($variables['elements']['name']['#bundle'])) {
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['elements']['name']['#bundle'] . '__' . $theNode->getType();
+  }
+}
