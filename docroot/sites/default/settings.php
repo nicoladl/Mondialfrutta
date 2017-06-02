@@ -749,9 +749,10 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
+if (file_exists(__DIR__ . '/settings.local.php')) {
+  include __DIR__ . '/settings.local.php';
+}
+
 $databases['default']['default'] = array (
   'database' => 'mondialfruttaD8',
   'username' => 'root',
@@ -763,4 +764,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_XplbMdNY8EUJH_9EHzpwv4_hlDVST4j5t15NgP9B_0uSUrK5OZ993Ei7eWOaHxgkmoardq-oUA/sync';
+$config_directories['sync'] = '../config/sync';
