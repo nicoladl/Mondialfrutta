@@ -1,0 +1,74 @@
+.visual {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .main-title {
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        opacity: 0;
+        animation-name: showing;
+        animation-duration: .7s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+    }
+
+    @keyframes showing {
+        100% { 
+            top: 50%;
+            opacity: 1;
+        }
+    }
+
+    .video {
+        height: 100vh;
+        position:absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
+
+        &--fullscreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 767px) {
+            .fullscreen-bg {
+                background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
+            }
+
+            .fullscreen-bg__video {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+    }
+}

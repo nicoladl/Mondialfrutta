@@ -26,3 +26,6 @@ docroot/modules/contrib/examples/
 
 # ingore private files
 /private_files
+
+.sass-cache/
+*.css.map

@@ -1,0 +1,163 @@
+.hp-row {
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+    padding-bottom: 10%;
+
+    .image {
+        background-position: center 50%;
+        //background-repeat: no-repeat;
+        transition: background-position 0s linear;
+
+        @include mq($from: medium) {
+            position: absolute;
+        }
+    }
+    @include mq($from: medium) {
+        width: 820px;
+    }
+}
+
+#block-azienda {
+    .text--row {
+        @include mq($from: medium) {
+            padding-top: 400px;
+        }
+    }
+
+    .image {
+
+        &--orizontal {
+            @include mq($from: medium) {
+                width: 540px;
+                height: 290px;
+                z-index: 1;
+                top: 150px;
+                left: 0;
+            }
+        }
+
+        &--vertical {
+            display: none;
+
+            @include mq($from: medium) {
+                display: block;
+                width: 380px;
+                height: 420px;
+                z-index: 0;
+                right: -30px;
+            }
+        }
+    }
+}
+
+#block-servizi {
+    .title {
+        @include mq($from: medium) {
+            padding-left: 50%;
+        }
+    }
+    .text--row {
+        @include mq($from: medium) {
+            padding-top: 350px;
+        }
+
+        @include mq($from: medium) {
+            padding-left: 50%;
+        }
+    }
+
+    .image {
+        &--vertical {
+            display: none;
+
+            @include mq($from: medium) {
+                display: block;
+                width: 300px;
+                height: 414px;
+                z-index: 1;
+                left: 20px;
+                top: 130px;
+            }
+        }
+
+        &--orizontal {
+            @include mq($from: medium) {
+                width: 860px;
+                height: 320px;
+                left: 0;
+                z-index: 0;
+            }
+        }
+    }
+
+    .cta {
+        @include mq($from: medium) {
+            left: 50%;
+            position: relative;
+        }
+    }
+}
+
+#block-clienti {
+    .text--row {
+        @include mq($from: medium) {
+            padding-top: 350px;
+        }
+    }
+
+    .image {
+        &--vertical {
+            display: none;
+
+            @include mq($from: medium) {
+                display: block;
+                width: 380px;
+                height: 420px;
+                z-index: 1;
+                right: -80px;
+                top: 160px;
+            }
+        }
+
+        &--orizontal {
+            @include mq($from: medium) {
+                width: 620px;
+                height: 290px;
+                z-index: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+#block-prodotti {
+    .title {
+        @include mq($from: medium) {
+            padding-top: 200px;
+        }
+    }
+
+    .image {
+        &--left {
+            display: none;
+
+            @include mq($from: medium) {
+                display: block;
+                width: 501px;
+                height: 287px;
+                z-index: 0;
+                left: -190px;
+            }
+        }
+
+        &--right {
+            @include mq($from: medium) {
+                width: 333px;
+                height: 296px;
+                z-index: 0;
+                right: -40px;
+            }
+        }
+    }
+}
