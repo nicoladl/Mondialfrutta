@@ -1,0 +1,28 @@
+uuid: ca9da651-3588-458b-b014-0bc416a09dc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_giugno
+    - node.type.disponibilta
+    - taxonomy.vocabulary.provenienza
+id: node.disponibilta.field_giugno
+field_name: field_giugno
+entity_type: node
+bundle: disponibilta
+label: Giugno
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

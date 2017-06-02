@@ -1,0 +1,19 @@
+uuid: 1b9551c1-1fce-49b4-9500-ae445c88be3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pre_footer_hp
+    - field.storage.block_content.field_testo
+id: block_content.pre_footer_hp.field_testo
+field_name: field_testo
+entity_type: block_content
+bundle: pre_footer_hp
+label: Testo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,20 @@
+uuid: 51b7da58-82ab-4771-a71e-e375ba4b6f56
+langcode: en
+status: false
+dependencies:
+  theme:
+    - mondialfrutta
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: mondialfrutta_local_actions
+theme: mondialfrutta
+region: header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

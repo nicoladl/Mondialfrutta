@@ -1,0 +1,8 @@
+uuid: 4ef9955a-593f-46bf-ac7f-156f5d7358cd
+langcode: en
+status: true
+dependencies: {  }
+id: visual_video
+label: 'Visual video'
+revision: 0
+description: 'Video di background'

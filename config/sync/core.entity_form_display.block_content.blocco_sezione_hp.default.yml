@@ -1,0 +1,29 @@
+uuid: 4fc479b4-8049-4090-89bd-a39dbd46d5ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.blocco_sezione_hp
+    - field.field.block_content.blocco_sezione_hp.field_claim
+id: block_content.blocco_sezione_hp.default
+targetEntityType: block_content
+bundle: blocco_sezione_hp
+mode: default
+content:
+  field_claim:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

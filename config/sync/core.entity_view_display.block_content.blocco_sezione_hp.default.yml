@@ -1,0 +1,21 @@
+uuid: b68974de-f4ad-473f-bf61-3ebfad547bbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.blocco_sezione_hp
+    - field.field.block_content.blocco_sezione_hp.field_claim
+id: block_content.blocco_sezione_hp.default
+targetEntityType: block_content
+bundle: blocco_sezione_hp
+mode: default
+content:
+  field_claim:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

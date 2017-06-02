@@ -1,0 +1,48 @@
+uuid: 7862b3b1-66be-425c-bc1b-ea433046eac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.provenienza.field_bandiera
+    - image.style.thumbnail
+    - taxonomy.vocabulary.provenienza
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.provenienza.default
+targetEntityType: taxonomy_term
+bundle: provenienza
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_bandiera:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

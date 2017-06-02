@@ -1,0 +1,19 @@
+uuid: 9fdf3637-4367-4985-b3c2-b1d8780f9f69
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pre_footer_hp
+    - field.storage.block_content.field_title
+id: block_content.pre_footer_hp.field_title
+field_name: field_title
+entity_type: block_content
+bundle: pre_footer_hp
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

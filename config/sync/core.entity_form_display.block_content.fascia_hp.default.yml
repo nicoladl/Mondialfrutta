@@ -1,0 +1,69 @@
+uuid: 6ae2953a-4eb2-48af-b572-b6d7dcdacead
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.fascia_hp
+    - field.field.block_content.fascia_hp.field_cta
+    - field.field.block_content.fascia_hp.field_immagine_orizzontale
+    - field.field.block_content.fascia_hp.field_immagine_verticale
+    - field.field.block_content.fascia_hp.field_testo_block
+    - field.field.block_content.fascia_hp.field_titolo
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+id: block_content.fascia_hp.default
+targetEntityType: block_content
+bundle: fascia_hp
+mode: default
+content:
+  field_cta:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_immagine_orizzontale:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_immagine_verticale:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testo_block:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_titolo:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

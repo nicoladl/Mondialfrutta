@@ -1,0 +1,20 @@
+uuid: a0195dca-cb2a-4507-8ed9-70df892a554c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_dicembre
+field_name: field_dicembre
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

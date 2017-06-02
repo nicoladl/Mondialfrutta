@@ -1,0 +1,31 @@
+uuid: 13140c00-9ee4-4d48-b529-8800499a4a3f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:pre_footer_hp:97e6d988-d1b8-4f80-bc66-9fd79f9c4396'
+  module:
+    - block_content
+    - system
+  theme:
+    - mondialfrutta
+id: prodotti
+theme: mondialfrutta
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:97e6d988-d1b8-4f80-bc66-9fd79f9c4396'
+settings:
+  id: 'block_content:97e6d988-d1b8-4f80-bc66-9fd79f9c4396'
+  label: Prodotti
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

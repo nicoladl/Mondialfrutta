@@ -1,0 +1,28 @@
+uuid: ee479988-1753-4ad0-9faf-8f8739593587
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.storage.block_content.field_luglio
+    - taxonomy.vocabulary.provenienza
+id: block_content.prodotto.field_luglio
+field_name: field_luglio
+entity_type: block_content
+bundle: prodotto
+label: Luglio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

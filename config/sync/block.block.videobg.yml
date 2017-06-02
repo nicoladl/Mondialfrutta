@@ -1,0 +1,25 @@
+uuid: b0f4a2ed-761a-43ec-91c4-888576363ed6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:visual_video:197861fa-e407-448d-a3c5-adc5b26df273'
+  module:
+    - block_content
+  theme:
+    - mondialfrutta
+id: videobg
+theme: mondialfrutta
+region: visual
+weight: -8
+provider: null
+plugin: 'block_content:197861fa-e407-448d-a3c5-adc5b26df273'
+settings:
+  id: 'block_content:197861fa-e407-448d-a3c5-adc5b26df273'
+  label: 'video bg'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

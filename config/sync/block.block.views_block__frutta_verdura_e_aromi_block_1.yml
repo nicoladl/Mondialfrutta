@@ -1,0 +1,30 @@
+uuid: 015f85f8-4198-4d3d-a305-d56c61d7ccca
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.frutta_verdura_e_aromi
+  module:
+    - system
+    - views
+  theme:
+    - mondialfrutta
+id: views_block__frutta_verdura_e_aromi_block_1
+theme: mondialfrutta
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:frutta_verdura_e_aromi-block_1'
+settings:
+  id: 'views_block:frutta_verdura_e_aromi-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /schede-tecniche
+    negate: false
+    context_mapping: {  }

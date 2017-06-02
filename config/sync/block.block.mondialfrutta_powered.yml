@@ -1,0 +1,22 @@
+uuid: 864f0a47-5b31-4b33-b39a-00631ddeaf4e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - mondialfrutta
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: mondialfrutta_powered
+theme: mondialfrutta
+region: header
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

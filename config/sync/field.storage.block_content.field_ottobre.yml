@@ -1,0 +1,20 @@
+uuid: 3e42afa3-e886-446a-b2c6-0bca3d04f22a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - taxonomy
+id: block_content.field_ottobre
+field_name: field_ottobre
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

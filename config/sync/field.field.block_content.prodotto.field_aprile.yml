@@ -1,0 +1,28 @@
+uuid: 54460411-4dc1-4df8-9c9f-62c470e6d723
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.storage.block_content.field_aprile
+    - taxonomy.vocabulary.provenienza
+id: block_content.prodotto.field_aprile
+field_name: field_aprile
+entity_type: block_content
+bundle: prodotto
+label: Aprile
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

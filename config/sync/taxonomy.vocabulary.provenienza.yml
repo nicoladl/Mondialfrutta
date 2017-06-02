@@ -1,0 +1,9 @@
+uuid: 624e0933-6ffd-4827-a124-c59151bf0b85
+langcode: en
+status: true
+dependencies: {  }
+name: Provenienza
+vid: provenienza
+description: 'Paese di provenienza'
+hierarchy: 0
+weight: 0

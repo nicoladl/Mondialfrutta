@@ -1,0 +1,23 @@
+uuid: d3b8da48-20bd-44dd-85ff-9ede740b47d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pre_footer_hp
+    - field.storage.block_content.field_cta_prefooter
+  module:
+    - link
+id: block_content.pre_footer_hp.field_cta_prefooter
+field_name: field_cta_prefooter
+entity_type: block_content
+bundle: pre_footer_hp
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

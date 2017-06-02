@@ -1,0 +1,22 @@
+uuid: 89eb4900-9f20-4576-9cc0-a5d57ed1859c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.visual_video
+    - field.field.block_content.visual_video.field_video
+  module:
+    - file
+id: block_content.visual_video.default
+targetEntityType: block_content
+bundle: visual_video
+mode: default
+content:
+  field_video:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+hidden: {  }

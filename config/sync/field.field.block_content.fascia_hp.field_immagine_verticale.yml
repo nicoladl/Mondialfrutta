@@ -1,0 +1,38 @@
+uuid: 62c6eda5-d036-48ef-8375-bfdc51fedfd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.fascia_hp
+    - field.storage.block_content.field_immagine_verticale
+  module:
+    - image
+id: block_content.fascia_hp.field_immagine_verticale
+field_name: field_immagine_verticale
+entity_type: block_content
+bundle: fascia_hp
+label: 'Immagine verticale'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: hp
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

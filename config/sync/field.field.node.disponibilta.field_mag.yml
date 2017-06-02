@@ -1,0 +1,28 @@
+uuid: 3ffcedd6-7e94-4cfb-be60-ee8b616469c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mag
+    - node.type.disponibilta
+    - taxonomy.vocabulary.provenienza
+id: node.disponibilta.field_mag
+field_name: field_mag
+entity_type: node
+bundle: disponibilta
+label: Maggio
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

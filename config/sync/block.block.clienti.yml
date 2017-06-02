@@ -1,0 +1,31 @@
+uuid: b93b886c-fd81-45fd-a061-cdd52ec7ee2c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:fascia_hp:825f4162-46b6-4f97-abb2-422e37b89ef4'
+  module:
+    - block_content
+    - system
+  theme:
+    - mondialfrutta
+id: clienti
+theme: mondialfrutta
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:825f4162-46b6-4f97-abb2-422e37b89ef4'
+settings:
+  id: 'block_content:825f4162-46b6-4f97-abb2-422e37b89ef4'
+  label: Clienti
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

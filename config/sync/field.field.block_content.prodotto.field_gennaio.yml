@@ -1,0 +1,28 @@
+uuid: 43a66c1c-8bea-4706-9f36-3fc208424218
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.storage.block_content.field_gennaio
+    - taxonomy.vocabulary.provenienza
+id: block_content.prodotto.field_gennaio
+field_name: field_gennaio
+entity_type: block_content
+bundle: prodotto
+label: Gennaio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,125 @@
+uuid: 37ac8920-1d92-4f51-9a7c-c61b5ae896cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.field.block_content.prodotto.field_agosto
+    - field.field.block_content.prodotto.field_aprile
+    - field.field.block_content.prodotto.field_dicembre
+    - field.field.block_content.prodotto.field_febbraio
+    - field.field.block_content.prodotto.field_gennaio
+    - field.field.block_content.prodotto.field_giugno
+    - field.field.block_content.prodotto.field_immagine
+    - field.field.block_content.prodotto.field_luglio
+    - field.field.block_content.prodotto.field_maggio
+    - field.field.block_content.prodotto.field_marzo
+    - field.field.block_content.prodotto.field_nome
+    - field.field.block_content.prodotto.field_novembre
+    - field.field.block_content.prodotto.field_ottobre
+    - field.field.block_content.prodotto.field_settembre
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.prodotto.default
+targetEntityType: block_content
+bundle: prodotto
+mode: default
+content:
+  field_agosto:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_aprile:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_dicembre:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_febbraio:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_gennaio:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_giugno:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_immagine:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_luglio:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_maggio:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_marzo:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_nome:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_novembre:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_ottobre:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_settembre:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

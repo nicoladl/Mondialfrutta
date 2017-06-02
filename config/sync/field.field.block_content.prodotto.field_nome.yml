@@ -1,0 +1,19 @@
+uuid: 1a2771de-945b-43bd-bb17-b81d89e0c601
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.storage.block_content.field_nome
+id: block_content.prodotto.field_nome
+field_name: field_nome
+entity_type: block_content
+bundle: prodotto
+label: Nome
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

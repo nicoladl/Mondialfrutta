@@ -1,0 +1,8 @@
+uuid: 841924bc-0e52-4642-951c-49b9b0127d16
+langcode: en
+status: true
+dependencies: {  }
+id: fascia_hp
+label: 'Fascia HP'
+revision: 0
+description: 'Layout fascia HP'

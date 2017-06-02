@@ -1,0 +1,65 @@
+uuid: 36a3c767-6e3d-4cb8-bcf8-24a0dc64a3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.fascia_hp
+    - field.field.block_content.fascia_hp.field_cta
+    - field.field.block_content.fascia_hp.field_immagine_orizzontale
+    - field.field.block_content.fascia_hp.field_immagine_verticale
+    - field.field.block_content.fascia_hp.field_testo_block
+    - field.field.block_content.fascia_hp.field_titolo
+  module:
+    - image
+    - link
+id: block_content.fascia_hp.default
+targetEntityType: block_content
+bundle: fascia_hp
+mode: default
+content:
+  field_cta:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_immagine_orizzontale:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_immagine_verticale:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_testo_block:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_titolo:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: 19117c03-8e79-4fb9-8e18-8549d10d017e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - mondialfrutta
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: mondialfrutta_messages
+theme: mondialfrutta
+region: header
+weight: -1
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

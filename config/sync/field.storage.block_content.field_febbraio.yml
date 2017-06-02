@@ -1,0 +1,20 @@
+uuid: 5ccd0a86-0152-465b-acf2-dad29ff434e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - taxonomy
+id: block_content.field_febbraio
+field_name: field_febbraio
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

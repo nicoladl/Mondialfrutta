@@ -1,0 +1,19 @@
+uuid: 275c9813-9cce-4120-b20f-f51271a698d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.blocco_sezione_hp
+    - field.storage.block_content.field_claim
+id: block_content.blocco_sezione_hp.field_claim
+field_name: field_claim
+entity_type: block_content
+bundle: blocco_sezione_hp
+label: Claim
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+uuid: 2bb3d268-c26b-4c4b-8682-4222455c6839
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.visual_video
+    - field.storage.block_content.field_video
+  module:
+    - file
+id: block_content.visual_video.field_video
+field_name: field_video
+entity_type: block_content
+bundle: visual_video
+label: video
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: video
+  file_extensions: mp4
+  max_filesize: '10 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

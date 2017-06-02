@@ -1,0 +1,23 @@
+uuid: 4bfac196-efee-4f1f-9c35-0ba04fd2bb75
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.fascia_hp
+    - field.storage.block_content.field_cta
+  module:
+    - link
+id: block_content.fascia_hp.field_cta
+field_name: field_cta
+entity_type: block_content
+bundle: fascia_hp
+label: CTA
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

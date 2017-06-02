@@ -1,0 +1,18 @@
+uuid: b1079303-df42-4c52-a026-6e4204d018a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.funghi
+  module:
+    - user
+id: node.funghi.teaser
+targetEntityType: node
+bundle: funghi
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

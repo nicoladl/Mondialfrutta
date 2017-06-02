@@ -1,0 +1,152 @@
+uuid: 934d7aba-7b06-489a-8aa8-0f74eb53dc1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.disponibilta.field_agosto
+    - field.field.node.disponibilta.field_aprile
+    - field.field.node.disponibilta.field_dicembre
+    - field.field.node.disponibilta.field_febbraio
+    - field.field.node.disponibilta.field_gennaio
+    - field.field.node.disponibilta.field_giugno
+    - field.field.node.disponibilta.field_immagine
+    - field.field.node.disponibilta.field_luglio
+    - field.field.node.disponibilta.field_mag
+    - field.field.node.disponibilta.field_marzo
+    - field.field.node.disponibilta.field_no
+    - field.field.node.disponibilta.field_ottobre
+    - field.field.node.disponibilta.field_settembre
+    - image.style.thumbnail
+    - node.type.disponibilta
+  module:
+    - image
+    - path
+id: node.disponibilta.default
+targetEntityType: node
+bundle: disponibilta
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_agosto:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_aprile:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_dicembre:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_febbraio:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_gennaio:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_giugno:
+    weight: 39
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_immagine:
+    weight: 33
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_luglio:
+    weight: 40
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_mag:
+    weight: 38
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_marzo:
+    weight: 36
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_no:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_ottobre:
+    weight: 43
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_settembre:
+    weight: 42
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

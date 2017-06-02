@@ -1,0 +1,22 @@
+uuid: 2f577d2a-53da-4753-b94b-10d2a9102dd5
+langcode: en
+status: false
+dependencies:
+  theme:
+    - mondialfrutta
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: mondialfrutta_local_tasks
+theme: mondialfrutta
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

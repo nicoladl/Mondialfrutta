@@ -1,0 +1,28 @@
+uuid: e7695b3a-afe7-4127-ba05-7e419060dfac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_settembre
+    - node.type.disponibilta
+    - taxonomy.vocabulary.provenienza
+id: node.disponibilta.field_settembre
+field_name: field_settembre
+entity_type: node
+bundle: disponibilta
+label: Settembre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

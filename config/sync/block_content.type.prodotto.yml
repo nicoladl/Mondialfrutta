@@ -1,0 +1,8 @@
+uuid: aac9d7dd-a422-49da-b936-626c3abf6f5c
+langcode: en
+status: true
+dependencies: {  }
+id: prodotto
+label: Prodotto
+revision: 0
+description: 'Blocco stagionalità'

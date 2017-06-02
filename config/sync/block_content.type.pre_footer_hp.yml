@@ -1,0 +1,8 @@
+uuid: d0a7404a-bb78-4bf2-8597-38cc3cb3178d
+langcode: en
+status: true
+dependencies: {  }
+id: pre_footer_hp
+label: 'Pre-footer HP'
+revision: 0
+description: 'Blocco di fine HP'

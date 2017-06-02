@@ -1,0 +1,20 @@
+uuid: 6b69c05f-979a-4a34-b6f1-e6e4c1886652
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - taxonomy
+id: block_content.field_gennaio
+field_name: field_gennaio
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

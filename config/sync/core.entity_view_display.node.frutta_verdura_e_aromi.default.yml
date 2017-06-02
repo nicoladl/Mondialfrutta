@@ -1,0 +1,37 @@
+uuid: 74f0e67d-049c-4cb9-8202-facb15251b7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.frutta_verdura_e_aromi.field_immagine
+    - field.field.node.frutta_verdura_e_aromi.field_scheda_tecnica
+    - node.type.frutta_verdura_e_aromi
+  module:
+    - file
+    - image
+    - user
+id: node.frutta_verdura_e_aromi.default
+targetEntityType: node
+bundle: frutta_verdura_e_aromi
+mode: default
+content:
+  field_immagine:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_scheda_tecnica:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

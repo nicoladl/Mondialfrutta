@@ -1,0 +1,8 @@
+uuid: a4b3d68d-d74f-47e5-bf19-f12c76cba5ec
+langcode: en
+status: true
+dependencies: {  }
+id: blocco_sezione_hp
+label: 'Testo visual HP'
+revision: 0
+description: 'Testo generale visual'

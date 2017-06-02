@@ -1,0 +1,62 @@
+uuid: a6b9cf63-d2d8-457b-a094-98d0b4d624e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pre_footer_hp
+    - field.field.block_content.pre_footer_hp.field_cta_prefooter
+    - field.field.block_content.pre_footer_hp.field_img_left
+    - field.field.block_content.pre_footer_hp.field_img_right
+    - field.field.block_content.pre_footer_hp.field_testo
+    - field.field.block_content.pre_footer_hp.field_title
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+id: block_content.pre_footer_hp.default
+targetEntityType: block_content
+bundle: pre_footer_hp
+mode: default
+content:
+  field_cta_prefooter:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_img_left:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_img_right:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testo:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  info: true

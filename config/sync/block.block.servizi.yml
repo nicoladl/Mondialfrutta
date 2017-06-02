@@ -1,0 +1,31 @@
+uuid: f68de283-5dc5-4d79-86b0-8b10916f7a55
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:fascia_hp:bbe412b4-8d1f-420b-b9bd-3bb7ca80285e'
+  module:
+    - block_content
+    - system
+  theme:
+    - mondialfrutta
+id: servizi
+theme: mondialfrutta
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:bbe412b4-8d1f-420b-b9bd-3bb7ca80285e'
+settings:
+  id: 'block_content:bbe412b4-8d1f-420b-b9bd-3bb7ca80285e'
+  label: Servizi
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

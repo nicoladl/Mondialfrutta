@@ -1,0 +1,25 @@
+uuid: 5e448e49-bf12-4968-8de6-acd59c6e500d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:blocco_sezione_hp:ca1460fb-2280-4004-85db-cecc183caf72'
+  module:
+    - block_content
+  theme:
+    - mondialfrutta
+id: inverno2016
+theme: mondialfrutta
+region: visual
+weight: -6
+provider: null
+plugin: 'block_content:ca1460fb-2280-4004-85db-cecc183caf72'
+settings:
+  id: 'block_content:ca1460fb-2280-4004-85db-cecc183caf72'
+  label: 'Inverno 2016'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

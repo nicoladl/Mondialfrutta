@@ -1,0 +1,19 @@
+uuid: e274fce2-d9fa-4125-8bc4-21ae7c6f4398
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_cta_prefooter
+field_name: field_cta_prefooter
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

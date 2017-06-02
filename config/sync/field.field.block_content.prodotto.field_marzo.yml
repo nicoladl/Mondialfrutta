@@ -1,0 +1,28 @@
+uuid: bbf27d3b-824e-4d74-a3fc-45a249e8ef70
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.storage.block_content.field_marzo
+    - taxonomy.vocabulary.provenienza
+id: block_content.prodotto.field_marzo
+field_name: field_marzo
+entity_type: block_content
+bundle: prodotto
+label: Marzo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

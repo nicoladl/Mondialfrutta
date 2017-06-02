@@ -1,0 +1,12 @@
+logo:
+  path: themes/custom/mondialfrutta/images/logo.png
+  use_default: 1
+_core:
+  default_config_hash: OgSQ-J0-YNU8KFKeOPcScLsvGHtfpsHBZgLMQkkG9tk
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+favicon:
+  use_default: 1

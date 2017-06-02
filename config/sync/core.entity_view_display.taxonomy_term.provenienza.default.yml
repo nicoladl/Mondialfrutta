@@ -1,0 +1,32 @@
+uuid: 1d7551ba-bd64-456b-a15f-030d892dc868
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.provenienza.field_bandiera
+    - taxonomy.vocabulary.provenienza
+  module:
+    - image
+    - text
+id: taxonomy_term.provenienza.default
+targetEntityType: taxonomy_term
+bundle: provenienza
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_bandiera:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

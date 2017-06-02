@@ -1,0 +1,38 @@
+uuid: 34483dcd-451b-4829-b768-ab3a040ec6e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pre_footer_hp
+    - field.storage.block_content.field_img_right
+  module:
+    - image
+id: block_content.pre_footer_hp.field_img_right
+field_name: field_img_right
+entity_type: block_content
+bundle: pre_footer_hp
+label: 'img right'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: hp
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,141 @@
+uuid: 7ff32803-8881-45e5-98fd-d889af56987e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.field.block_content.prodotto.field_agosto
+    - field.field.block_content.prodotto.field_aprile
+    - field.field.block_content.prodotto.field_dicembre
+    - field.field.block_content.prodotto.field_febbraio
+    - field.field.block_content.prodotto.field_gennaio
+    - field.field.block_content.prodotto.field_giugno
+    - field.field.block_content.prodotto.field_immagine
+    - field.field.block_content.prodotto.field_luglio
+    - field.field.block_content.prodotto.field_maggio
+    - field.field.block_content.prodotto.field_marzo
+    - field.field.block_content.prodotto.field_nome
+    - field.field.block_content.prodotto.field_novembre
+    - field.field.block_content.prodotto.field_ottobre
+    - field.field.block_content.prodotto.field_settembre
+  module:
+    - image
+id: block_content.prodotto.default
+targetEntityType: block_content
+bundle: prodotto
+mode: default
+content:
+  field_agosto:
+    weight: 10
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_aprile:
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dicembre:
+    weight: 14
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_febbraio:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_gennaio:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_giugno:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_immagine:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_luglio:
+    weight: 9
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_maggio:
+    weight: 7
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_marzo:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_nome:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_novembre:
+    weight: 13
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ottobre:
+    weight: 12
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_settembre:
+    weight: 11
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

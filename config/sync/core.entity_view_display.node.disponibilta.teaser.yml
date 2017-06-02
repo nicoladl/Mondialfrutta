@@ -1,0 +1,44 @@
+uuid: df6b5090-ff28-456d-9e10-0f654565ccc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.disponibilta.field_agosto
+    - field.field.node.disponibilta.field_aprile
+    - field.field.node.disponibilta.field_dicembre
+    - field.field.node.disponibilta.field_febbraio
+    - field.field.node.disponibilta.field_gennaio
+    - field.field.node.disponibilta.field_giugno
+    - field.field.node.disponibilta.field_immagine
+    - field.field.node.disponibilta.field_luglio
+    - field.field.node.disponibilta.field_mag
+    - field.field.node.disponibilta.field_marzo
+    - field.field.node.disponibilta.field_no
+    - field.field.node.disponibilta.field_ottobre
+    - field.field.node.disponibilta.field_settembre
+    - node.type.disponibilta
+  module:
+    - user
+id: node.disponibilta.teaser
+targetEntityType: node
+bundle: disponibilta
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_agosto: true
+  field_aprile: true
+  field_dicembre: true
+  field_febbraio: true
+  field_gennaio: true
+  field_giugno: true
+  field_immagine: true
+  field_luglio: true
+  field_mag: true
+  field_marzo: true
+  field_no: true
+  field_ottobre: true
+  field_settembre: true

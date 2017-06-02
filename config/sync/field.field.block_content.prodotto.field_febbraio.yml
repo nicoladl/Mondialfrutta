@@ -1,0 +1,28 @@
+uuid: d1f06588-932c-412d-90c2-ac45fb06cbd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.storage.block_content.field_febbraio
+    - taxonomy.vocabulary.provenienza
+id: block_content.prodotto.field_febbraio
+field_name: field_febbraio
+entity_type: block_content
+bundle: prodotto
+label: Febbraio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

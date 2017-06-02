@@ -1,0 +1,31 @@
+uuid: 5a9250b5-4807-433b-9035-a16d180e026a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:fascia_hp:2ce7eafd-e11a-4c42-8937-c3dc4e1d0751'
+  module:
+    - block_content
+    - system
+  theme:
+    - mondialfrutta
+id: azienda
+theme: mondialfrutta
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:2ce7eafd-e11a-4c42-8937-c3dc4e1d0751'
+settings:
+  id: 'block_content:2ce7eafd-e11a-4c42-8937-c3dc4e1d0751'
+  label: Azienda
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

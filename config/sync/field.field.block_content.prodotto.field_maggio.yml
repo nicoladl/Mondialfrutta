@@ -1,0 +1,28 @@
+uuid: 5efa9be1-a783-440a-bf14-2c69a2af5f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.prodotto
+    - field.storage.block_content.field_maggio
+    - taxonomy.vocabulary.provenienza
+id: block_content.prodotto.field_maggio
+field_name: field_maggio
+entity_type: block_content
+bundle: prodotto
+label: Maggio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provenienza: provenienza
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

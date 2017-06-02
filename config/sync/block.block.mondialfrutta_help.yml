@@ -1,0 +1,22 @@
+uuid: 1c123ac3-f6d9-4c95-9f28-3b5373312217
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - mondialfrutta
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: mondialfrutta_help
+theme: mondialfrutta
+region: header
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

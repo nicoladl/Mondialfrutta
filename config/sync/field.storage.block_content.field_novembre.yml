@@ -1,0 +1,20 @@
+uuid: 1a584d1e-0b7b-4078-8ccb-617cda9cdce0
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - taxonomy
+id: block_content.field_novembre
+field_name: field_novembre
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
