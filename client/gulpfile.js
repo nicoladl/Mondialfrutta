@@ -105,15 +105,15 @@ gulp.task('svgstore', function() {
 /**
 * Watch assets
 **/
-gulp.task('watch', function() {
+gulp.task('watch', ['styles', 'scripts', 'images'],  function() {
 
   browserSync.init({
-    server: webPath + '/'
+    proxy: "mondialfruttad8.dev"
   });
 
-  gulp.watch(basePath + '/sass/**/*.scss', ['style']).on('change', browserSync.reload);
-  gulp.watch(basePath + '/script/**/*.js', ['script']).on('change', browserSync.reload);
-  gulp.watch(basePath + '/img/**/*', ['images']).on('change', browserSync.reload);
+  gulp.watch('/sass/**/*.scss', ['styles']).on('change', browserSync.reload);
+  gulp.watch('/script/**/*.js', ['scripts']).on('change', browserSync.reload);
+  gulp.watch('/img/**/*', ['images']).on('change', browserSync.reload);
 });
 
 
@@ -123,7 +123,7 @@ gulp.task('watch', function() {
 *
 **/
 gulp.task('build', function() {
-    gulp.start('styles', 'scripts', 'images', 'fonts', 'svgstore');
+    gulp.start('styles', 'scripts', 'images');
 });
 
 
@@ -136,7 +136,7 @@ gulp.task('build', function() {
 **/
 gulp.task('serve', ['build','watch'], function() {
     browserSync.init({
-        proxy: "local.etinerary.com"
+        proxy: "mondialfruttad8.dev"
     });
 });
 
