@@ -22,7 +22,7 @@ $common_params = [
       'mode' => 'rlcDz',
       'exclude-files' => TRUE,
       'exclude-from' => 'exclude-list.txt',
-      'delete' => TRUE,
+      'delete' => FALSE,
     ],
   ],
 	'command-specific' => [
@@ -36,20 +36,23 @@ $common_params = [
 	],
 ];
 
+$options['ssh-options'] = '-o PasswordAuthentication=no -i /Users/ndelazzari/.ssh/mondialfrutta_rsa';
+
+
 $aliases['local'] = [
 	'root' => getcwd(),
-	'uri' => 'http://h-farm.dev',
+	'uri' => 'http://mondialfruttad8.dev/',
 	'path-aliases' => [
 		'%dump-dir' => '/tmp',
 	],
 ];
 
 $aliases['prod'] = [
-	'root' => '/Users/ndelazzari/project/PERSONALE/MondialfruttaD8/docroot',
+	'root' => '/var/www/html',
 	'uri' => 'http://www.mondialfrutta.com',
 	'remote-host' => '37.186.139.228',
 	'remote-user' => 'root',
   'path-aliases' => [
-    '%drush-script' => '/var/www/html/drush',
+
   ],
 ] + $common_params;

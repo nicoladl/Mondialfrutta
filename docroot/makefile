@@ -12,5 +12,8 @@ deploy: ## deploy a specific branch to target site
 	drush -y -v rsync @local:../config/ @$(D_TARGET):../config/
 	drush @$(D_TARGET) cr
 
+db-sync: ## sync db
+	drush -y -v sql-sync @local @$(D_TARGET)
+
 help:
 	@grep -P '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
