@@ -25,3 +25,5 @@ web.config
 .gitattributes
 .user.ini
 docker
+.htaccess
+.htpasswd

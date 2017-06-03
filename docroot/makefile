@@ -9,11 +9,13 @@ cr: ## clean the target: drush cr
 deploy: ## deploy a specific branch to target site
 	cd ../client && gulp build && cd ../docroot
 	drush -y -v rsync @local @$(D_TARGET)
-	drush -y -v rsync @local:../config/ @$(D_TARGET):../config/
 	drush @$(D_TARGET) cr
 
 db-sync: ## sync db
 	drush -y -v sql-sync @local @$(D_TARGET)
+
+config-sync: ## config sync
+	drush -y -v rsync @local:../config/ @$(D_TARGET):../config/
 
 help:
 	@grep -P '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
