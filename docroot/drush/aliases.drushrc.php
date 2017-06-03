@@ -38,6 +38,8 @@ $common_params = [
 
 $options['ssh-options'] = '-o PasswordAuthentication=no -i /Users/ndelazzari/.ssh/mondialfrutta_rsa';
 
+$command_specific['config-export']['skip-modules'] = array('devel');
+$command_specific['config-import']['skip-modules'] = array('pathauto');
 
 $aliases['local'] = [
 	'root' => getcwd(),
