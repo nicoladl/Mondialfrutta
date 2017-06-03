@@ -215,7 +215,7 @@ display:
             trim_whitespace: false
             alt: '{{ title }}'
             rel: ''
-            link_class: ''
+            link_class: 'cta scheda-tecnica__link'
             prefix: ''
             suffix: ''
             target: _blank
