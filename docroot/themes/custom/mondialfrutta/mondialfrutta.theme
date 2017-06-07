@@ -14,3 +14,15 @@ function mondialfrutta_css_alter(&$css) {
     'weight' => -2,
   );
 }
+
+function mondialfrutta_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    // You can get nid and anything else you need from the node object.
+    $nid = $node->id();
+
+    if ($nid == 238) {
+      $suggestions[] = 'page__schede__tecniche';
+    }
+  }
+}
