@@ -3,7 +3,7 @@ type: theme
 description: Logistica ortofrutticola
 core: 8.x
 
-base: classy
+base: stable
 
 libraries:
     - mondialfrutta/global-css
