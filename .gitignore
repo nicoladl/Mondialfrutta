@@ -35,3 +35,4 @@ docroot/themes/custom/mondialfrutta/images
 .sass-cache/
 *.css.map
 */node_modules
+*.sql
