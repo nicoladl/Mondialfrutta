@@ -754,7 +754,7 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
 }
 
 $databases['default']['default'] = array (
-  'database' => 'mondialfruttaD8',
+  'database' => 'mondialfrutta',
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
