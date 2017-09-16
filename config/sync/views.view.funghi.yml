@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_immagine
     - field.storage.node.field_scheda_tecnica
+    - image.style.stagionalita
     - node.type.funghi
   module:
     - file
@@ -101,8 +102,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: h2
+          element_class: 'scheda-tecnica__title  title__view'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -181,7 +182,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: stagionalita
             image_link: ''
           group_column: ''
           group_columns: {  }

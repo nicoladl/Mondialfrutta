@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_immagine
     - field.storage.node.field_scheda_tecnica
+    - image.style.stagionalita
     - node.type.frutta_verdura_e_aromi
   module:
     - file
@@ -120,7 +121,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: stagionalita
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -170,7 +171,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: scheda-tecnica__title
+          element_class: 'scheda-tecnica__title  title__view'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

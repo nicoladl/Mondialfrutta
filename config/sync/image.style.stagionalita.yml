@@ -1,0 +1,14 @@
+uuid: 98f84ed2-7110-4247-9b9c-487ba4ad5568
+langcode: en
+status: true
+dependencies: {  }
+name: stagionalita
+label: 'Stagionalità thumb'
+effects:
+  b82d37e5-5cf0-4bbf-a7ba-38c0613fcb35:
+    uuid: b82d37e5-5cf0-4bbf-a7ba-38c0613fcb35
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 70
+      height: 70
