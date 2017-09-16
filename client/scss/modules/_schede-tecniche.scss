@@ -1,8 +1,7 @@
 .scheda-tecnica {
 
   &__item {
-    margin-bottom: 25px;
-    padding-bottom: 25px;
+    padding: 10px 0;
     border-bottom: 1px solid $border;
     transition: all .5s;
 
@@ -10,7 +9,9 @@
       box-shadow: 0px 8px 10px rgba(0,0,0,0.15),
                   -10px 8px 15px rgba(0,0,0,0.15), 
                   10px 8px 15px rgba(0,0,0,0.15);
-      transform: translateY(-25px);
+      transform: translateY(-2px);
+      z-index: 1;
+      background-color: white;
       transition: all .5s;
     }
   }
@@ -18,12 +19,12 @@
   &__title {
     padding: 20px 0;
     margin: 0;
-    margin-bottom: 20px;
+    margin-top: 30px;
     border-bottom: 2px solid $border;
   }
 
   &__item-title {
-    font-size: 18px;
+    font-size: 0.875rem;
     font-weight: 700;
     color: $mondialfruttaGreenDark;
     text-align: center;
@@ -32,8 +33,6 @@
 
   &__immagine {
     img {
-      width: 80%;
-      height: auto;
       left: 50%;
       position: relative;
       transform: translateX(-50%);
