@@ -108,12 +108,12 @@ gulp.task('svgstore', function() {
 gulp.task('watch', ['styles', 'scripts', 'images'],  function() {
 
   browserSync.init({
-    proxy: "mondialfruttad8.dev"
+    proxy: "mondialfrutta.dev"
   });
 
-  gulp.watch('/sass/**/*.scss', ['styles']).on('change', browserSync.reload);
-  gulp.watch('/script/**/*.js', ['scripts']).on('change', browserSync.reload);
-  gulp.watch('/img/**/*', ['images']).on('change', browserSync.reload);
+  gulp.watch('scss/**/*.scss', ['styles']).on('change', browserSync.reload);
+  gulp.watch('script/**/*.js', ['scripts']).on('change', browserSync.reload);
+  gulp.watch('img/**/*', ['images']).on('change', browserSync.reload);
 });
 
 
@@ -136,7 +136,7 @@ gulp.task('build', function() {
 **/
 gulp.task('serve', ['build','watch'], function() {
     browserSync.init({
-        proxy: "mondialfruttad8.dev"
+        proxy: "mondialfrutta.dev"
     });
 });
 
