@@ -1,6 +1,6 @@
 uuid: 4c065e05-5f4c-4469-9447-87d471466c3e
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: mondialfrutta_footer
 theme: mondialfrutta
-region: header
-weight: -8
+region: footer
+weight: -11
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
