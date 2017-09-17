@@ -1,0 +1,63 @@
+.address {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.93rem;
+	line-height: 25px;
+	font-weight: 500;
+	color: $mondialfruttaBlack;
+	padding: 40px 0;
+
+	a {
+		color: inherit;
+	}
+}
+
+.contact {
+	form {
+		margin-bottom: 40px;
+
+		input.short {
+			width: 45% !important;
+			margin-right: 5% !important;
+		}
+
+		input, textarea {
+			background-color: #d9d4cc;
+			border-radius: 100px;
+			height: 40px;
+			border: 0;
+			box-sizing: border-box;
+			padding: 5px;
+			padding-left: 20px;
+			margin-bottom: 20px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 0.8rem;
+			letter-spacing: 0.9px;
+			color: #565902;
+		}
+
+		textarea {
+			border-radius: 20px;
+			height: 80px;
+		}
+
+		input.cta {
+			border: 2px solid $mondialfruttaRed;
+			background-color: $mondialfruttaRed;
+			border-radius: 20px;
+			text-align: center;
+			font-size: .8em;
+			letter-spacing: 1px;
+			float: left;
+			cursor: pointer;
+			color: #fff;
+			padding: 0 40px;
+			text-transform: uppercase;
+			transition: all .5s;
+
+			&:hover {
+				background-color: transparent;
+				color: $mondialfruttaRed;		
+			}
+		}
+	}
+}
