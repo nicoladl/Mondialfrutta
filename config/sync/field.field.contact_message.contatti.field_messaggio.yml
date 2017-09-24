@@ -1,0 +1,19 @@
+uuid: 1aeb7d14-55cb-44c7-8f08-504942bda591
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contatti
+    - field.storage.contact_message.field_messaggio
+id: contact_message.contatti.field_messaggio
+field_name: field_messaggio
+entity_type: contact_message
+bundle: contatti
+label: Messaggio
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

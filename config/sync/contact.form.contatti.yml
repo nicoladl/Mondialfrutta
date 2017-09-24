@@ -1,0 +1,12 @@
+uuid: 6e93d13d-4bc9-4a6f-9552-5d42c0785263
+langcode: en
+status: true
+dependencies: {  }
+id: contatti
+label: Contatti
+recipients:
+  - nicola.delazzari@gmail.com
+reply: ''
+weight: 0
+message: Grazie!
+redirect: ''

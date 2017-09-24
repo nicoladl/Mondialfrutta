@@ -1,0 +1,21 @@
+uuid: ca4f7f1c-b0f8-4212-8786-611a23c1df8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_cognome
+field_name: field_cognome
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

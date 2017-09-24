@@ -1,0 +1,63 @@
+uuid: 1c9173c7-a494-4051-9871-3b9635de7b0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contatti
+    - field.field.contact_message.contatti.field_azienda
+    - field.field.contact_message.contatti.field_cognome
+    - field.field.contact_message.contatti.field_e_mail
+    - field.field.contact_message.contatti.field_messaggio
+    - field.field.contact_message.contatti.field_nome
+id: contact_message.contatti.default
+targetEntityType: contact_message
+bundle: contatti
+mode: default
+content:
+  field_azienda:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cognome:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_e_mail:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_messaggio:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_nome:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }
