@@ -16,8 +16,15 @@
 		margin-bottom: 40px;
 
 		input.short {
-			width: 45% !important;
-			margin-right: 5% !important;
+
+			@include mq($from: medium) {
+				width: 45%;
+				margin-right: 5%;
+			}
+
+			@include mq($until: medium) {
+				width: 100%;
+			}
 		}
 
 		input, textarea {
@@ -33,6 +40,10 @@
 			font-size: 0.8rem;
 			letter-spacing: 0.9px;
 			color: #565902;
+
+			@include mq($until: medium) {
+				width: 100%;
+			}
 		}
 
 		textarea {

@@ -1,6 +1,8 @@
 (function ($) {
     'use strict';
 
+    var MEDIUM = 1024;
+
     $('.js-hamburger').on('click', function() {
         $('.js-menu-container, .js-hamburger').toggleClass('open');
         $('.overlay').toggleClass('open');
@@ -76,33 +78,35 @@
         return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
     };
 
-    const offsetOrizontal = 0.6;
-    const offsetVertical = 0.4;
+    if ( $(window).width() > MEDIUM ) {
+        const offsetOrizontal = 0.6;
+        const offsetVertical = 0.4;
 
-    $(window).scroll(function() {
-        $('.image').each(function( index ) {
-            var $this = $(this);
-            if ( $this.isOnScreen() ) {
-                $this.addClass('js-effect');
+        $(window).scroll(function() {
+            $('.image').each(function( index ) {
+                var $this = $(this);
+                if ( $this.isOnScreen() ) {
+                    $this.addClass('js-effect');
 
-                var firstTop = $this.offset().top,
-                    winScrollTop = $(window).scrollTop(),
-                    shiftDistance = (firstTop - winScrollTop);
+                    var firstTop = $this.offset().top,
+                        winScrollTop = $(window).scrollTop(),
+                        shiftDistance = (firstTop - winScrollTop);
 
-                var percentageOrizontal = (($this.height() + shiftDistance)/($(window).height()/100))*offsetOrizontal;
-                var percentageVertical = (($this.height() + shiftDistance)/($(window).height()/100))*offsetVertical;
+                    var percentageOrizontal = (($this.height() + shiftDistance)/($(window).height()/100))*offsetOrizontal;
+                    var percentageVertical = (($this.height() + shiftDistance)/($(window).height()/100))*offsetVertical;
 
-                if ( $this.hasClass('image--vertical') ) {
-                    $this.css('background-position', 'center '+percentageVertical+'%');
-                } else if ( $this.hasClass('image--orizontal') ) {
+                    if ( $this.hasClass('image--vertical') ) {
+                        $this.css('background-position', 'center '+percentageVertical+'%');
+                    } else if ( $this.hasClass('image--orizontal') ) {
 
-                    $this.css('background-position', 'center '+percentageOrizontal+'%');
+                        $this.css('background-position', 'center '+percentageOrizontal+'%');
+                    }
+                } else {
+                    $this.css('background-position', 'center 50%');
                 }
-            } else {
-                $this.css('background-position', 'center 50%');
-            }
+            });
         });
-    });
+    }
 
     // Tab
     $('.tabs__title').on('mouseenter', function() {

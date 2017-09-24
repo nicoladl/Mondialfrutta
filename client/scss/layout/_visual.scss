@@ -20,6 +20,13 @@
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
         animation-delay: 2s;
+
+        @include mq($until: medium) {
+            width: 100%;
+            padding: 0 10%;
+            left: 0;
+            box-sizing: border-box;
+        }
     }
 
     @keyframes showing {

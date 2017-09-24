@@ -1,4 +1,17 @@
 .wrapper {
   width: 820px;
   margin: 0 auto;
+
+  @include mq($until: medium) {
+  	width: 100%;
+  	padding: 0 10%;
+  	box-sizing: border-box;
+  }
+}
+
+.wrapper-mobile {
+	@include mq($from: medium) {
+  		width: 820px;
+  		margin: 0 auto;
+	}
 }

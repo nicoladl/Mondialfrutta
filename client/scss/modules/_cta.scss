@@ -9,6 +9,12 @@
   cursor: pointer;
   transition: all .5s;
 
+  @include mq($until: medium) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &:hover {
     background-color: transparent;
 

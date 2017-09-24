@@ -6,6 +6,10 @@
 	color: $footerText;
 	box-sizing: border-box;
 
+	@include mq($until: medium) {
+        margin-top: 50px;
+    }
+
 	ul, li {
 		list-style: none;
 		padding: 0;
@@ -16,6 +20,11 @@
 		
 		&__item {
 			float: left;
+
+			@include mq($until: medium) {
+		        display: block;
+		        width: 100%;
+		    }
 
 			h5 {
 				font-family: 'Montserrat', sans-serif;

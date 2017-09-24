@@ -51,6 +51,10 @@
     	animation-timing-function: ease-in;
     	animation-fill-mode: forwards;
     	animation-delay: 1s;
+
+    	 img {
+    	 	width: 100%;
+    	 }
 	}
 
 	@keyframes logo {

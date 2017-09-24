@@ -3,13 +3,25 @@
 
 	&__title {
 		height: 80px;
-		border-top: solid 1px #979797;
-		border-bottom: solid 1px #979797;
-		border-right: solid 1px #979797;
 		cursor: pointer;
 
-		&:last-child {
-			border-right: 0;
+		@include mq($from: medium) {
+			border-top: solid 1px #979797;
+			border-bottom: solid 1px #979797;
+			border-right: solid 1px #979797;
+
+			&:last-child {
+				border-right: 0;
+			}
+		}
+
+		@include mq($until: medium) {
+			border: 0;
+			border-top: 1px solid #979797;
+
+			&:last-child {
+				border-bottom: 1px solid #979797;
+			}
 		}
 
 		&.active {
@@ -18,7 +30,7 @@
 	}
 
 	&__text {
-		padding: 50px 20vw;
+		padding: 50px 10vw;
 	}
 
 	&__image {
