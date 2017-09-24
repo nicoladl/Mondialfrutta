@@ -11,5 +11,4 @@ cd ${DOCROOT} && drush cset -y system.site uuid ${SITE_ID}
 
 # Import the configuration from configuration manager.
 cd ${DOCROOT} && drush cim sync -y
-
 cd ${DOCROOT} && drush mi --all

@@ -6,8 +6,8 @@
 
     .image {
         background-position: center 50%;
-        //background-repeat: no-repeat;
         transition: background-position 0s linear;
+        will-change: auto;
 
         @include mq($from: medium) {
             position: absolute;

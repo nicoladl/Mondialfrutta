@@ -20,41 +20,43 @@
         }
     });
 
-    // Get a reference to the <path>
-    var path = document.querySelector('#path');
+    if ($('.path-frontpage').length > 0) {
+        // Get a reference to the <path>
+        var path = document.querySelector('#path');
 
-    // Get length of path
-    var pathLength = path.getTotalLength();
+        // Get length of path
+        var pathLength = path.getTotalLength();
 
-    $('.path').css('top', $('.visual').height());
+        $('.path').css('top', $('.visual').height());
 
-    // Make very long dashes (the length of the path itself)
-    path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        // Make very long dashes (the length of the path itself)
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
 
-    // Offset the dashes so the it appears hidden entirely
-    path.style.strokeDashoffset = pathLength;
+        // Offset the dashes so the it appears hidden entirely
+        path.style.strokeDashoffset = pathLength;
 
-    // When the page scrolls...
-    window.addEventListener('scroll', function(e) {
+        // When the page scrolls...
+        window.addEventListener('scroll', function(e) {
 
-        // What % down is it?
-        var scrollPercentage = ( (document.documentElement.scrollTop + document.body.scrollTop) - $('.visual').height() ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            // What % down is it?
+            var scrollPercentage = ( (document.documentElement.scrollTop + document.body.scrollTop) - $('.visual').height() ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
-        // Length to offset the dashes
-        var drawLength = pathLength * (scrollPercentage * 1.5);
+            // Length to offset the dashes
+            var drawLength = pathLength * (scrollPercentage * 1.5);
 
-        // Draw in reverse
-        path.style.strokeDashoffset = pathLength - drawLength;
+            // Draw in reverse
+            path.style.strokeDashoffset = pathLength - drawLength;
 
-        // ... at bottom of scrolling function
+            // ... at bottom of scrolling function
 
-        // When complete, remove the dash array, otherwise shape isn't quite sharp
-        if (scrollPercentage >= 0.99) {
-            path.style.strokeDasharray = 'none';
-        } else {
-            path.style.strokeDasharray = pathLength + ' ' + pathLength;
-        }
-    });
+            // When complete, remove the dash array, otherwise shape isn't quite sharp
+            if (scrollPercentage >= 0.99) {
+                path.style.strokeDasharray = 'none';
+            } else {
+                path.style.strokeDasharray = pathLength + ' ' + pathLength;
+            }
+        });
+    }
 
     // check if  element is on viewport
     $.fn.isOnScreen = function(){
@@ -100,6 +102,17 @@
                 $this.css('background-position', 'center 50%');
             }
         });
+    });
+
+    // Tab
+    $('.tabs__title').on('mouseenter', function() {
+        var item = $(this).data('item');
+
+        $('.tabs__title').removeClass('active');
+        $(this).addClass('active');
+
+        $('.tabs__item').removeClass('active');
+        $('.tabs__item[data-item='+ item +']').addClass('active');
     });
 
 })(jQuery);

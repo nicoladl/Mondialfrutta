@@ -1,4 +1,5 @@
 .text {
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: $mondialfruttaBlack;
     letter-spacing: 0;
@@ -11,5 +12,14 @@
     	@include mq($from: medium) {
         	width: 50%;
         }
+    }
+
+    &__tab {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        color: $mondialfruttaBlack;
+        letter-spacing: 0;
+        line-height: 25px;
     }
 }

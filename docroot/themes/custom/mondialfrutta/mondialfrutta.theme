@@ -24,5 +24,11 @@ function mondialfrutta_theme_suggestions_page_alter(array &$suggestions, array $
     if ($nid == 238) {
       $suggestions[] = 'page__schede__tecniche';
     }
+    if ($nid == 7) {
+      $suggestions[] = 'page__contatti';
+    }
+    if ($nid == 3) {
+      $suggestions[] = 'page__clienti';
+    }
   }
 }

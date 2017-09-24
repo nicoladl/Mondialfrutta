@@ -19,4 +19,17 @@
         line-height: 25px;
         text-transform: uppercase;
     }
+
+    &__tab {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 1.35rem;
+        line-height: 80px;
+        color: #71bd44;
+        text-align: center;
+
+        .active & {
+            color: $mondialfruttaBlack;
+        }
+    }
 }
