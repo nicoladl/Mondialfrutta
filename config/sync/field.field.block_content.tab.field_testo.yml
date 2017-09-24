@@ -1,0 +1,19 @@
+uuid: 946cb716-8260-4a09-9b80-cd798d87dc8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tab
+    - field.storage.block_content.field_testo
+id: block_content.tab.field_testo
+field_name: field_testo
+entity_type: block_content
+bundle: tab
+label: 'Testo 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

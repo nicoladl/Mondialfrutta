@@ -1,0 +1,59 @@
+uuid: 829b57d6-a1ef-426a-8f76-9c8017ae29b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tab
+    - field.field.block_content.tab.field_immagine
+    - field.field.block_content.tab.field_immagine_tab
+    - field.field.block_content.tab.field_testo
+    - field.field.block_content.tab.field_titolo_tab
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.tab.default
+targetEntityType: block_content
+bundle: tab
+mode: default
+content:
+  field_immagine:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_immagine_tab:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testo:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_titolo_tab:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

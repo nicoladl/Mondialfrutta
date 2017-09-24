@@ -1,0 +1,38 @@
+uuid: 86176cc5-a010-4986-8ef1-31d38292c2a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tab
+    - field.storage.block_content.field_immagine_tab
+  module:
+    - image
+id: block_content.tab.field_immagine_tab
+field_name: field_immagine_tab
+entity_type: block_content
+bundle: tab
+label: 'Immagine 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: tab
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
