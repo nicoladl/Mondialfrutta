@@ -109,7 +109,7 @@
     }
 
     // Tab
-    $('.tabs__title').on('mouseenter', function() {
+    $('.tabs__title').on('click', function() {
         var item = $(this).data('item');
 
         $('.tabs__title').removeClass('active');

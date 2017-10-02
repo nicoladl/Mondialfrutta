@@ -5,11 +5,12 @@
 	<div class="row">
 		<div class="column small-full medium-half">
 			<div class="address">
-				<p>Mondialfrutta s.r.l.<br>
-				via Roma 31<br>
-				31100 Treviso<br><br>
+				<p>Mondialfrutta S.R.L.<br>
+				Via Pastore Giulio, 27,<br>
+				31044 Montebelluna TV<br><br>
 
-				Partita IVA Tel. +39 0422 00118789<br>
+				Partita IVA <br>
+				Tel. +39 0423 22911<br>
 				E-mail <a href="mailto:info@mondialfrutta.com">info@mondialfrutta.com</a>
 				</p>
 			</div>
@@ -37,8 +38,9 @@
 <script>
 	function initMap() {
 		var mondialfrutta = {lat: 45.7765148, lng: 12.0166059};
+
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 11,
+			zoom: 13,
 			center: mondialfrutta,
 			styles: [
 				{
@@ -244,6 +246,14 @@
 				}
 			]
 		});
+
+		var image = '{{ directory }}/images/marker.png';
+		var marker = new google.maps.Marker({
+          position: mondialfrutta,
+          map: map,
+          icon: image,
+          title: 'Mondialfrutta S.R.L.'
+        });
 	}
 </script>
 

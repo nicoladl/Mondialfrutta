@@ -1,0 +1,396 @@
+<div id="map-logistica"></div>
+
+<div class="tabs tabs--nopadding">
+	<div class="row">
+		<div class="tabs__title active column small-full medium-six large-six reset" data-item="nodi">
+			<div class="title__tab">Nodi logistico-commerciali</div>
+		</div>
+		<div class="tabs__title column small-full medium-six large-six reset" data-item="porti">
+			<div class="title__tab">Porti</div>
+		</div>
+	</div>
+
+	<div class="tabs__item active" data-item="nodi">
+		<div class="tabs__text text__tab">
+			<div class="row">
+				<div class="column small-six reset">
+					<ul>
+						<li>Treviso (Montebelluna)</li>
+						<li>Gorizia</li>
+						<li>Cesena</li>
+						<li>Bologna</li>
+						<li>Bergamo</li>
+						<li>Milano</li>
+						<li>Roma</li>
+						<li>Cagliari</li>
+					</ul>
+				</div>
+				<div class="column small-six reset">
+					<ul>
+						<li>Torino - Genova</li>
+						<li>Lucca (Capannoli)</li>
+						<li>Teramo (Martinsicuro)</li>
+						<li>Barletta (Andria)</li>
+						<li>Cosenza</li>
+						<li>Trento</li>
+						<li>Napoli</li>
+						<li>Trapani</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tabs__item" data-item="porti">
+		<div class="tabs__text text__tab">
+			<div class="row">
+				<div class="column small-six reset">
+					<ul>
+						<li>Test 1</li>
+					</ul>
+				</div>
+				<div class="column small-six reset">
+					<ul>
+						<li>Test 2</li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function initMap() {
+		var mondialfrutta = {lat: 45.7765148, lng: 12.0166059};
+
+
+		var map = new google.maps.Map(document.getElementById('map-logistica'), {
+			zoom: 6,
+			center: {lat: 42.2744398, lng: 5.2606315},
+			styles: [
+			{
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#f5f5f5"
+				}
+				]
+			},
+			{
+				"elementType": "labels",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"elementType": "labels.icon",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#616161"
+				}
+				]
+			},
+			{
+				"elementType": "labels.text.stroke",
+				"stylers": [
+				{
+					"color": "#f5f5f5"
+				}
+				]
+			},
+			{
+				"featureType": "administrative",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "administrative.land_parcel",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "administrative.land_parcel",
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#bdbdbd"
+				}
+				]
+			},
+			{
+				"featureType": "administrative.neighborhood",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "poi",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "poi",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#eeeeee"
+				}
+				]
+			},
+			{
+				"featureType": "poi",
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#757575"
+				}
+				]
+			},
+			{
+				"featureType": "poi.business",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "poi.park",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#e5e5e5"
+				}
+				]
+			},
+			{
+				"featureType": "poi.park",
+				"elementType": "labels.text",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "poi.park",
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#9e9e9e"
+				}
+				]
+			},
+			{
+				"featureType": "road",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "road",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#ffffff"
+				}
+				]
+			},
+			{
+				"featureType": "road",
+				"elementType": "labels.icon",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "road.arterial",
+				"elementType": "labels",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "road.arterial",
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#757575"
+				}
+				]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#dadada"
+				}
+				]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "labels",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#616161"
+				}
+				]
+			},
+			{
+				"featureType": "road.local",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "road.local",
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#9e9e9e"
+				}
+				]
+			},
+			{
+				"featureType": "transit",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "transit.line",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#e5e5e5"
+				}
+				]
+			},
+			{
+				"featureType": "transit.station",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#eeeeee"
+				}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"color": "#c9c9c9"
+				}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{
+					"color": "#9e9e9e"
+				}
+				]
+			}
+			]
+		});
+
+		var markerGroups = {
+		    'nodi': [
+				['Montebelluna', 45.7765148, 12.0166059],
+				['Gorizia', 45.9470174, 13.5745954],
+				['Cesena', 44.14918,12.1924236],
+				['Bologna', 44.4990968,11.2616457],
+				['Bergamo', 45.693177,9.6320702],
+				['Milano', 45.4627124,9.1076925],
+				['Roma', 41.909986,12.3959142],
+				['Cagliari', 39.2253991,9.0933586],
+				['Torino', 45.0734673,7.6055668],
+				['Genova', 44.4468921,8.7507487],
+				['Lucca (Capannoli)', 43.8459636,10.4326106],
+				['Teramo (Martinsicuro)', 42.8801396,13.8938082],
+				['Barletta (Andria)', 41.3174926,16.2468983],
+				['Cosenza', 39.3047949,16.2172893],
+				['Trento', 46.0804401,11.050316],
+				['Napoli', 40.8539123,14.1765625],
+				['Trapani', 38.0173969,12.503583]
+			],
+		    'porti': [
+		    	['Montebelluna', 45.7765148, 12.0166059],
+				['Gorizia', 45.9470174, 13.5745954],
+				['Cesena', 44.14918,12.1924236]
+		    ]
+		};
+
+		var marker;
+		var image = '{{ directory }}/images/marker-little.png';
+		
+		for (var i in markerGroups) {
+			for (var j in markerGroups[i]) {
+				marker = new google.maps.Marker({
+					position: new google.maps.LatLng(markerGroups[i][j][1], markerGroups[i][j][2]),
+					map: map,
+					icon: image,
+					title: markerGroups[i][j][0]
+				});
+			}
+		}
+	}
+
+	// $('.tabs__title').on('click', function() {
+ //    	var type = $(this).data('item');
+
+ //        var marker = markerGroups[type];
+ //        if (!marker.getVisible()) {
+ //            marker.setVisible(true);
+ //        } else {
+ //            marker.setVisible(false);
+ //        }
+ //    });
+</script>
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF2UpwyHhDSoXHB8IunvpuckY46wNLM24&callback=initMap"></script>
