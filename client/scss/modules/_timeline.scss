@@ -1,0 +1,30 @@
+.timeline {
+    height: 100%;
+
+    @include mq($until: medium) {
+		padding: 0 10%;
+    }
+
+    @include mq($from: medium) {
+		overflow: scroll;
+    	position: absolute;
+    	width: 30%;
+	    top: 0;
+	    left: 60%;
+    }
+	
+	&__item {
+		padding: 20px 0;
+
+		.title {
+			font-size: 1.875rem;
+		}
+		
+		.description {
+	    	font-family: 'Montserrat', sans-serif;
+			font-size: 0.875rem;
+			padding: 10px 0;
+		}
+	}
+
+}

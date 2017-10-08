@@ -1,4 +1,9 @@
-<div id="map-logistica"></div>
+<div class="map">
+	<div id="map-logistica"></div>
+	<div class="title">
+		Rete Logistica<br>Nazionale
+	</div>
+</div>
 
 <div class="tabs tabs--nopadding">
 	<div class="row">
@@ -45,12 +50,13 @@
 			<div class="row">
 				<div class="column small-six reset">
 					<ul>
-						<li>Test 1</li>
+						<li>Montebelluna</li>
+						<li>Cesena</li>
 					</ul>
 				</div>
 				<div class="column small-six reset">
 					<ul>
-						<li>Test 2</li>
+						<li>Gorizia</li>
 					</ul>
 				</div>
 			</div>
@@ -67,6 +73,7 @@
 		var map = new google.maps.Map(document.getElementById('map-logistica'), {
 			zoom: 6,
 			center: {lat: 42.2744398, lng: 5.2606315},
+			disableDefaultUI: true,
 			styles: [
 			{
 				"elementType": "geometry",
@@ -379,17 +386,6 @@
 			}
 		}
 	}
-
-	// $('.tabs__title').on('click', function() {
- //    	var type = $(this).data('item');
-
- //        var marker = markerGroups[type];
- //        if (!marker.getVisible()) {
- //            marker.setVisible(true);
- //        } else {
- //            marker.setVisible(false);
- //        }
- //    });
 </script>
 
 

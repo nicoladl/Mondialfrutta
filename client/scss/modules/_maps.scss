@@ -7,3 +7,13 @@
 	width: 100vw;
 	height: 560px;
 }
+
+.map {
+	position: relative;
+
+	.title {
+		position: absolute;
+		top: 25%;
+		left: 20%;
+	}
+}
