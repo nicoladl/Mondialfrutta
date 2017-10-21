@@ -5,7 +5,7 @@
 
 #map-logistica {
 	width: 100vw;
-	height: 560px;
+	height: 636px;
 }
 
 .map {
@@ -17,3 +17,6 @@
 		left: 20%;
 	}
 }
+
+.gm-style-iw + div { display: none }
+.gm-style-iw { text-align:center }

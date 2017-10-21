@@ -19,7 +19,7 @@
 		<div class="tabs__text text__tab">
 			<div class="row">
 				<div class="column small-six reset">
-					<ul>
+					<ul class="marker">
 						<li>Treviso (Montebelluna)</li>
 						<li>Gorizia</li>
 						<li>Cesena</li>
@@ -31,8 +31,9 @@
 					</ul>
 				</div>
 				<div class="column small-six reset">
-					<ul>
-						<li>Torino - Genova</li>
+					<ul class="marker">
+						<li>Torino</li>
+						<li>Genova</li>
 						<li>Lucca (Capannoli)</li>
 						<li>Teramo (Martinsicuro)</li>
 						<li>Barletta (Andria)</li>
@@ -49,13 +50,13 @@
 		<div class="tabs__text text__tab">
 			<div class="row">
 				<div class="column small-six reset">
-					<ul>
+					<ul class="marker">
 						<li>Montebelluna</li>
 						<li>Cesena</li>
 					</ul>
 				</div>
 				<div class="column small-six reset">
-					<ul>
+					<ul class="marker">
 						<li>Gorizia</li>
 					</ul>
 				</div>
@@ -347,7 +348,7 @@
 
 		var markerGroups = {
 		    'nodi': [
-				['Montebelluna', 45.7765148, 12.0166059],
+				['Treviso (Montebelluna)', 45.7765148, 12.0166059],
 				['Gorizia', 45.9470174, 13.5745954],
 				['Cesena', 44.14918,12.1924236],
 				['Bologna', 44.4990968,11.2616457],
@@ -372,19 +373,52 @@
 		    ]
 		};
 
-		var marker;
+		var markers = [];
 		var image = '{{ directory }}/images/marker-little.png';
+		var imageHover = '';
 		
 		for (var i in markerGroups) {
 			for (var j in markerGroups[i]) {
-				marker = new google.maps.Marker({
+				var marker = new google.maps.Marker({
 					position: new google.maps.LatLng(markerGroups[i][j][1], markerGroups[i][j][2]),
 					map: map,
 					icon: image,
-					title: markerGroups[i][j][0]
+					data: markerGroups[i][j][0]
 				});
+				google.maps.event.addListener(marker, 'mouseover', function() {
+			    	// this.setIcon(imageHover);
+		            if (!this.getMap()._infoWindow) {
+		                this.getMap()._infoWindow = new google.maps.InfoWindow();
+		            }
+		            this.getMap()._infoWindow.close();
+		            this.getMap()._infoWindow.setContent(this.data);
+		            this.getMap()._infoWindow.open(this.getMap(), this);
+				});
+				google.maps.event.addListener(marker, 'mouseout', function() {
+				    // this.setIcon(image);
+		            this.getMap()._infoWindow.close();
+				});
+				markers.push(marker);
 			}
 		}
+
+		$('.marker li').click(function() {
+			$('.marker li').removeClass('active');
+			$(this).toggleClass('active');
+
+			var data = $(this).html();
+			
+			for(var i = 0; i < markers.length; i++) {
+				// markers[i].setIcon(image);
+
+			    if (markers[i].data == data) {
+			    	$('body, html').animate({scrollTop:0}, '500');
+			        google.maps.event.trigger(markers[i], 'mouseover');
+			    }
+			}
+            
+        });
+
 	}
 </script>
 

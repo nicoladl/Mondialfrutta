@@ -49,5 +49,15 @@
 		&.active {
 			display: block;
 		}
+
+		.marker {
+			li {
+				cursor: pointer;
+
+				&.active {
+					color: $mondialfruttaRed;
+				}
+			}
+		}
 	}
 }
