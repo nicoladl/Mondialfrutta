@@ -11,6 +11,7 @@
     	width: 30%;
 	    top: 0;
 	    left: 60%;
+	    padding-top: 100px;
     }
 	
 	&__item {
@@ -25,6 +26,10 @@
 			font-size: 0.875rem;
 			padding: 10px 0;
 		}
+	}
+
+	&__container {
+		padding: 100px 0;
 	}
 
 }
