@@ -119,4 +119,12 @@
         $('.tabs__item[data-item='+ item +']').addClass('active');
     });
 
+    // Scroll Reveal
+    var config = {
+
+    }
+
+    window.sr = ScrollReveal();
+    sr.reveal('.sr');
+
 })(jQuery);
