@@ -20,5 +20,10 @@ config-sync: ## config sync
 	drush @$(D_TARGET) cim -y
 	drush @$(D_TARGET) cr
 
+all: ## all toghether
+	deploy
+	bd-sync
+	config-sync
+
 help:
 	@grep -P '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
