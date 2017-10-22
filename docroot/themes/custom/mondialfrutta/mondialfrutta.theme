@@ -36,5 +36,8 @@ function mondialfrutta_theme_suggestions_page_alter(array &$suggestions, array $
     if ($nid == 402) {
       $suggestions[] = 'page__rete__logistica';
     }
+    if ($nid == 1) {
+      $suggestions[] = 'page__servizi';
+    }
   }
 }
