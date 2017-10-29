@@ -1,0 +1,14 @@
+.mask {
+	width: 315px;
+	height: 470px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.mask-video {
+	height: 100%;
+    -webkit-clip-path: url(#arancia);
+    clip-path: url(#arancia);
+}
