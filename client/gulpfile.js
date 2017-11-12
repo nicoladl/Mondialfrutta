@@ -105,7 +105,7 @@ gulp.task('svgstore', function() {
 /**
 * Watch assets
 **/
-gulp.task('watch', ['styles', 'scripts', 'images'],  function() {
+gulp.task('watch', ['styles', 'scripts', 'images', 'fonts'],  function() {
 
   browserSync.init({
     proxy: "mondialfrutta.dev"
@@ -114,6 +114,7 @@ gulp.task('watch', ['styles', 'scripts', 'images'],  function() {
   gulp.watch('scss/**/*.scss', ['styles']).on('change', browserSync.reload);
   gulp.watch('js/**/*.js', ['scripts']).on('change', browserSync.reload);
   gulp.watch('img/**/*', ['images']).on('change', browserSync.reload);
+  gulp.watch('fonts/**/*', ['fonts']).on('change', browserSync.reload);
 });
 
 
@@ -123,7 +124,7 @@ gulp.task('watch', ['styles', 'scripts', 'images'],  function() {
 *
 **/
 gulp.task('build', function() {
-    gulp.start('styles', 'scripts', 'images');
+    gulp.start('styles', 'scripts', 'images', 'fonts');
 });
 
 
