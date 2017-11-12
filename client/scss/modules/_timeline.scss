@@ -26,6 +26,10 @@
 			font-size: 0.875rem;
 			padding: 10px 0;
 		}
+
+		&:last-child {
+			padding-bottom: 150px;
+		}
 	}
 
 	&__container {

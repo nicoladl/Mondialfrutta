@@ -108,6 +108,18 @@
         });
     }
 
+    // Modal
+    $('.modal-init').on('click', function() {
+        var modal = $(this).data('modal');
+
+        $('.modal[data-modal="'+ modal +'"]').addClass('show');
+        $('.overlay').toggleClass('open');
+    });
+    $('.modal-close').on('click', function() {
+        $('.modal').removeClass('show');
+        $('.overlay').toggleClass('open');
+    })
+
     // Tab
     $('.tabs__title').on('click', function() {
         var item = $(this).data('item');

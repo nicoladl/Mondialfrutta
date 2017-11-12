@@ -25,10 +25,26 @@
 .img {
 	width: 100%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	&--absolute {
+		@include mq($from: medium) {
+			position: absolute;
+			width: 100%;
+		}
+	}
 }
 
 .pleft40 {
 	@include mq($from: medium) {
 		padding-left: 40px;
 	}
+}
+
+.mtop50 {
+	margin-top: 50px;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
 }

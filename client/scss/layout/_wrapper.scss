@@ -1,5 +1,5 @@
 .wrapper {
-  width: 820px;
+  padding: 0 20%;
   margin: 0 auto;
 
   @include mq($until: medium) {
