@@ -35,6 +35,10 @@
 
 	&__text {
 		padding: 50px 10vw;
+
+		&--height {
+			min-height: 600px !important;
+        }
 	}
 
 	&__image {

@@ -26,5 +26,9 @@
     &__header {
         font-size: 18px;
         line-height: 32px;
+
+        &--alone {
+            margin: 40px 0;
+        }
     }
 }

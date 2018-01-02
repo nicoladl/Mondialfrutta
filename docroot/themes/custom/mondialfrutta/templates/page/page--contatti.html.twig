@@ -10,7 +10,8 @@
 	<div class="row">
 		<div class="column small-full medium-half">
 			<div class="address">
-				<p>Mondialfrutta S.R.L.<br>
+				<p>
+					Mondialfrutta S.R.L.<br>
 					Via Pastore Giulio, 27,<br>
 					31044 Montebelluna TV<br><br>
 
@@ -27,13 +28,13 @@
 	<div class="row">
 		<div class="column medium-full">
 			<div class="contact">
-				<form action="submit" class="row">
-					<input class="column small-full medium-half reset short" placeholder="Nome" type="text" name="Nome">
+				<form action method class="row" id="contatti">
+					<input class="column small-full medium-half short" placeholder="Nome" type="text" name="Nome">
 					<input class="column small-full medium-half reset" placeholder="Cognome" type="text" name="Cognome">
-					<input class="column small-full medium-half reset short" placeholder="E-mail" type="email" name="E-mail">
+					<input class="column small-full medium-half short" placeholder="E-mail" type="email" name="E-mail">
 					<input class="column small-full medium-half reset" placeholder="Azienda" type="text" name="Azienda">
 					<textarea class="column medium-full reset" name="Messaggio">Messaggio</textarea>
-					<input class="cta" type="submit">
+					<input class="cta" type="submit" value="invia">
 				</form>
 			</div>
 		</div>
@@ -44,7 +45,7 @@
 function initMap() {
 	var mondialfrutta = {
 		pos: {
-			lat: 45.7765148, 
+			lat: 45.7765148,
 			lng: 12.0166059
 		},
 		data: 'Via Pastore Giulio, 27,<br>31044 Montebelluna TV'
@@ -54,6 +55,7 @@ function initMap() {
 		zoom: 13,
 		center: mondialfrutta.pos,
 		disableDefaultUI: true,
+		scrollwheel: false,
 		styles: [
 		{
 			"elementType": "geometry",
