@@ -145,6 +145,8 @@
     .title {
         @include mq($from: medium) {
             padding-top: 200px;
+            z-index: 1;
+            position: relative;
         }
     }
 

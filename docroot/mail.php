@@ -42,10 +42,6 @@
     // $responseKeys = json_decode($response,true);
 
     // if(intval($responseKeys["success"]) === 1) {
-	echo $mailto;
-	echo $subject;
-	echo $content;
-	echo $headers;
 
       	if (mail($mailto, $subject, $content, $headers)) {
 		    echo "$success"; // success

@@ -1,41 +1,52 @@
+<div class="layout-container">
+  <main role="main">
 
-<div class="map">
-	<div class="map" id="map"></div>
-	<div class="title">
-		Contatti
+    <div class="row wrapper">
+      <div class="column large-full">
+        <h3 class="title">Contatti</h3>
+      </div>
+    </div>
+
+	<div class="map">
+		<div class="map" id="map"></div>
+		<!-- <div class="title">
+			Contatti
+		</div> -->
 	</div>
-</div>
 
-<div class="wrapper">
-	<div class="row">
-		<div class="column small-full medium-half">
-			<div class="address">
-				<p>
-					Mondialfrutta S.R.L.<br>
-					Via Pastore Giulio, 27,<br>
-					31044 Montebelluna TV<br><br>
+	<div class="wrapper">
+		<div class="row">
+			<div class="column small-full medium-half">
+				<div class="address">
+					<p>
+						<a class="nounderline" href="https://www.google.it/maps/dir//Mondialfrutta+S.R.L.,+Via+Pastore+Giulio,+27,+31044+Montebelluna+TV/@45.7765148,12.0187946,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x477924380780ee47:0x223373df08a281a4!2m2!1d12.0187946!2d45.7765148" target="_blank">
+						Mondialfrutta S.R.L.<br>
+						Via Pastore Giulio, 27,<br>
+						31044 Montebelluna TV<br><br>
+						</a>
 
-					Partita IVA <br>
-					Tel. +39 0423 22911<br>
-					E-mail <a href="mailto:info@mondialfrutta.com">info@mondialfrutta.com</a>
-				</p>
+						Partita IVA  00992233445<br>
+						Tel. +39 0423 22911<br>
+						E-mail <a class="nounderline" href="mailto:ordini@mondialfrutta.com">ordini@mondialfrutta.com</a>
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<h3 class="title__section">per ulteriori informazioni</h3>
+		<h3 class="title__section">Per ulteriori informazioni sui nostri servizi e forniture, o per fissare un appuntamento presso la nostra azienda, inviaci un messaggio tramite il seguente form:</h3>
 
-	<div class="row">
-		<div class="column medium-full">
-			<div class="contact">
-				<form action method class="row" id="contatti">
-					<input class="column small-full medium-half short" placeholder="Nome" type="text" name="Nome">
-					<input class="column small-full medium-half reset" placeholder="Cognome" type="text" name="Cognome">
-					<input class="column small-full medium-half short" placeholder="E-mail" type="email" name="E-mail">
-					<input class="column small-full medium-half reset" placeholder="Azienda" type="text" name="Azienda">
-					<textarea class="column medium-full reset" name="Messaggio">Messaggio</textarea>
-					<input class="cta" type="submit" value="invia">
-				</form>
+		<div class="row">
+			<div class="column medium-full">
+				<div class="contact">
+					<form action method class="row" id="contatti">
+						<input class="column small-full medium-half short" placeholder="Nome" type="text" name="Nome">
+						<input class="column small-full medium-half reset" placeholder="Cognome" type="text" name="Cognome">
+						<input class="column small-full medium-half short" placeholder="E-mail" type="email" name="E-mail">
+						<input class="column small-full medium-half reset" placeholder="Azienda" type="text" name="Azienda">
+						<textarea class="column medium-full reset" name="Messaggio">Messaggio</textarea>
+						<input class="cta" type="submit" value="invia">
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -48,7 +59,7 @@ function initMap() {
 			lat: 45.7765148,
 			lng: 12.0166059
 		},
-		data: 'Via Pastore Giulio, 27,<br>31044 Montebelluna TV'
+		data: '<a href="https://www.google.it/maps/dir//Mondialfrutta+S.R.L.,+Via+Pastore+Giulio,+27,+31044+Montebelluna+TV/@45.7765148,12.0187946,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x477924380780ee47:0x223373df08a281a4!2m2!1d12.0187946!2d45.7765148" target="_blank">Via Pastore Giulio, 27,<br>31044 Montebelluna TV</a>'
 	};
 
 	var map = new google.maps.Map(document.getElementById('map'), {
@@ -316,6 +327,12 @@ function initMap() {
 	google.maps.event.addListener(marker, 'mouseout', function() {
 	    // this.setIcon(image);
 	    this.getMap()._infoWindow.close();
+	});
+	google.maps.event.addListener(marker, 'click', function() {
+	    window.open(
+	    	'https://www.google.it/maps/dir//Mondialfrutta+S.R.L.,+Via+Pastore+Giulio,+27,+31044+Montebelluna+TV/@45.7765148,12.0187946,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x477924380780ee47:0x223373df08a281a4!2m2!1d12.0187946!2d45.7765148',
+	    	'_blank'
+	    )
 	});
 }
 </script>

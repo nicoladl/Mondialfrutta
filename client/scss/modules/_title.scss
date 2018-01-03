@@ -17,7 +17,7 @@
         font-weight: 500;
         font-size: 0.93rem;
         line-height: 25px;
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
 
     &__tab {
@@ -25,11 +25,11 @@
         font-weight: 500;
         font-size: 1.35rem;
         line-height: 80px;
-        color: #71bd44;
+        color: $mondialfruttaBlack;
         text-align: center;
 
         .active & {
-            color: $mondialfruttaBlack;
+            color: #71bd44;
         }
     }
 
