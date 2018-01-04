@@ -108,7 +108,7 @@ gulp.task('svgstore', function() {
 gulp.task('watch', ['styles', 'scripts', 'images', 'fonts'],  function() {
 
   browserSync.init({
-    proxy: "mondialfrutta.dev"
+    proxy: "localhost:3000",
   });
 
   gulp.watch('scss/**/*.scss', ['styles']).on('change', browserSync.reload);
@@ -137,7 +137,7 @@ gulp.task('build', function() {
 **/
 gulp.task('serve', ['build','watch'], function() {
     browserSync.init({
-        proxy: "mondialfrutta.dev"
+        proxy: "localhost:3000"
     });
 });
 

@@ -39,5 +39,8 @@ function mondialfrutta_theme_suggestions_page_alter(array &$suggestions, array $
     if ($nid == 1) {
       $suggestions[] = 'page__servizi';
     }
+    if ($nid == 453 || $nid == 573) {
+      $suggestions[] = 'page__contatti2';
+    }
   }
 }

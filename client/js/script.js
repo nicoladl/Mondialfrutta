@@ -2,6 +2,12 @@
     'use strict';
 
     var MEDIUM = 1024;
+    var visualHeight;
+    if ($('.visual').height()) {
+        visualHeight = $('.visual').height();
+    } else {
+        visualHeight = 200
+    }
 
     $('.js-hamburger').on('click', function() {
         $('.js-menu-container, .js-hamburger').toggleClass('open');
@@ -15,7 +21,7 @@
     });
 
     $(window).scroll(function() {
-        if ( $(window).scrollTop() > $('.visual').height() ) {
+        if ( $(window).scrollTop() > visualHeight ) {
             $('header').addClass('open');
         } else {
             $('header').removeClass('open')

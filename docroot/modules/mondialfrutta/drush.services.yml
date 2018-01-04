@@ -1,0 +1,5 @@
+services:
+  mondialfrutta.commands:
+    class: \Drupal\mondialfrutta\Commands\MondialfruttaCommands
+    tags:
+      - { name: drush.command }

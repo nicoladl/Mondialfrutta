@@ -6,6 +6,7 @@
 
     .image {
         background-position: center 50%;
+        background-repeat: no-repeat;
         transition: background-position 0s linear;
         will-change: auto;
 
@@ -167,8 +168,11 @@
 
             @include mq($until: medium) {
                 img {
-                    width: 100%;
+                    width: 50%;
                     height: 100%;
+                    left: 50%;
+                    position: relative;
+                    transform: translateX(-50%);
                 }
             }
 

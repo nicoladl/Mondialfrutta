@@ -80,7 +80,7 @@
     {% for item in items %}
       {# <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div> #}
       <div class="video">
-	    <video autoplay loop class="video--fullscreen">
+	    <video autoplay loop class="video--fullscreen" poster="sites/default/files/hp/poster.png">
 	        <source src="sites/default/files/video/{% spaceless %}{{ conBody|striptags }}{% endspaceless %}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 	        Video not supported.
 	    </video>
