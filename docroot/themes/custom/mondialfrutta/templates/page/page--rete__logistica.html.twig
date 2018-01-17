@@ -35,6 +35,8 @@
 				<div class="row">
 					<div class="column small-six reset">
 						<ul class="marker">
+							<li>Ancona</li>
+							<li>Avezzano</li>
 							<li>Barletta (Andria)</li>
 							<li>Bergamo</li>
 							<li>Bologna</li>
@@ -46,12 +48,12 @@
 							<li>Lucca (Capannoli)</li>
 							<li>Milano</li>
 							<li>Napoli</li>
-					    	<li>Nizza</li>
-							<li>Genova</li>
 						</ul>
 					</div>
 					<div class="column small-six reset">
 						<ul class="marker">
+					    	<li>Nizza</li>
+							<li>Genova</li>
 							<li>Gorizia</li>
 							<li>Piombino</li>
 							<li>Ravenna</li>
@@ -73,8 +75,11 @@
 				<div class="row">
 					<div class="column small-six reset">
 						<ul class="marker">
+							<li>Ancona</li>
+							<li>Bari</li>
 							<li>Cagliari</li>
 							<li>Catania</li>
+							<li>Civitavecchia</li>
 							<li>Genova</li>
 							<li>Livorno</li>
 							<li>Nizza</li>
@@ -84,8 +89,11 @@
 						<ul class="marker">
 							<li>Napoli</li>
 							<li>Piombino</li>
-							<li>Savona</li>
 							<li>Ravenna</li>
+							<li>Salerno</li>
+							<li>Savona</li>
+							<li>Trieste</li>
+							<li>Koper</li>
 							<li>Venezia</li>
 						</ul>
 					</div>
@@ -99,11 +107,21 @@
 <script>
 	function initMap() {
 		var mondialfrutta = {lat: 45.7765148, lng: 12.0166059};
+		var zoom;
+		var center;
+
+		if ($(window).width() > 1024) {
+			zoom = 6;
+			center = {lat: 42.2744398, lng: 5.2606315};
+		} else {
+			zoom = 5;
+			center = {lat: 42.354104, lng: 13.083833};
+		}
 
 
 		var map = new google.maps.Map(document.getElementById('map-logistica'), {
-			zoom: 6,
-			center: {lat: 42.2744398, lng: 5.2606315},
+			zoom: zoom,
+			center: center,
 			disableDefaultUI: true,
 			scrollwheel: false,
 			styles: [
@@ -402,7 +420,9 @@
 				['Piombino', 42.9332714, 10.4908031,13],
 				['Ravenna', 44.4151569, 12.1630865,13],
 				['Venezia', 45.462431, 12.2630756,13],
-				['Catania', 37.4906905, 15.007478,12]
+				['Catania', 37.4906905, 15.007478,12],
+				['Avezzano', 42.0331251, 13.4178086],
+				['Ancona', 43.5821503, 13.4367866]
 			],
 		    'porti': [
 		    	['Nizza', 43.7031691, 7.1827772,12],
@@ -414,14 +434,20 @@
 				['Cagliari', 39.2253991, 9.0933586],
 				['Ravenna', 44.4151569, 12.1630865,13],
 				['Venezia', 45.462431, 12.2630756,13],
-				['Catania', 37.4906905, 15.007478,12]
+				['Catania', 37.4906905, 15.007478,12],
+				['Trieste', 45.6522988, 13.7136222],
+				['Civitavecchia', 42.088796, 11.765646],
+				['Salerno', 40.4183026, 14.5571178],
+				['Bari', 41.111356, 16.8120403],
+				['Koper', 45.5405823, 13.7076453],
+				['Ancona', 43.5821503, 13.4367866]
 		    ]
 		};
 
 		var markers = [];
 		var image = '{{ directory }}/images/marker-little.png';
 		var imageHover = '';
-		
+
 		for (var i in markerGroups) {
 			for (var j in markerGroups[i]) {
 				var marker = new google.maps.Marker({
@@ -447,21 +473,28 @@
 			}
 		}
 
+		var offset;
+		if ($(window).width() > 1024) {
+			offset = 0
+		} else {
+			offset = $('#map-logistica').offset().top
+		}
+
 		$('.marker li').click(function() {
 			$('.marker li').removeClass('active');
 			$(this).toggleClass('active');
 
 			var data = $(this).html();
-			
+
 			for(var i = 0; i < markers.length; i++) {
 				// markers[i].setIcon(image);
 
 			    if (markers[i].data == data) {
-			    	$('body, html').animate({scrollTop:0}, '500');
+			    	$('body, html').animate({scrollTop:offset}, '500');
 			        google.maps.event.trigger(markers[i], 'mouseover');
 			    }
 			}
-            
+
         });
 
 	}

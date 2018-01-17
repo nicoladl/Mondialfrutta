@@ -29,6 +29,10 @@ header {
 
             img {
                 height: 100%;
+
+                @include mq($until: iphone5) {
+                    width: 90%;
+                }
             }
         }
     }
@@ -170,10 +174,12 @@ header {
                     transition: all .2s ease-out;
                 }
 
-                &:hover {
-                    &:before {
-                        bottom: 100%;
-                        transform: translate(-50%) scale(1, 1);
+                @include mq($from: medium) {
+                    &:hover {
+                        &:before {
+                            bottom: 100%;
+                            transform: translate(-50%) scale(1, 1);
+                        }
                     }
                 }
             }

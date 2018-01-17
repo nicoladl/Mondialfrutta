@@ -49,3 +49,9 @@
 		}
 	}
 }
+
+.img-mobile {
+	@include mq($until: medium) {
+		width: 100%;
+	}
+}

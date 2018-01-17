@@ -8,6 +8,7 @@ global-js:
     version: 1.0
     js:
         js/vendor/scrollreveal.min.js: {}
+        js/vendor/IIV.min.js: {}
         js/script.js: {}
     dependencies:
         - core/jquery

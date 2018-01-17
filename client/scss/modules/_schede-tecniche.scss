@@ -5,14 +5,16 @@
     border-bottom: 1px solid $border;
     transition: all .5s;
 
-    &:hover {
-      box-shadow: 0px 8px 10px rgba(0,0,0,0.15),
-                  -10px 8px 15px rgba(0,0,0,0.15), 
-                  10px 8px 15px rgba(0,0,0,0.15);
-      transform: translateY(-2px);
-      z-index: 1;
-      background-color: white;
-      transition: all .5s;
+    @include mq($from: medium) {
+      &:hover {
+        box-shadow: 0px 8px 10px rgba(0,0,0,0.15),
+                    -10px 8px 15px rgba(0,0,0,0.15), 
+                    10px 8px 15px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
+        z-index: 1;
+        background-color: white;
+        transition: all .5s;
+      }
     }
   }
 

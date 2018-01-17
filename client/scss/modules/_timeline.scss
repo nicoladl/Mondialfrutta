@@ -13,14 +13,14 @@
 	    left: 60%;
 	    padding-top: 100px;
     }
-	
+
 	&__item {
 		padding: 20px 0;
 
 		.title {
 			font-size: 1.875rem;
 		}
-		
+
 		.description {
 	    	font-family: 'Montserrat', sans-serif;
 			font-size: 0.875rem;
@@ -28,12 +28,16 @@
 		}
 
 		&:last-child {
-			padding-bottom: 150px;
+			@include mq($from: medium) {
+				padding-bottom: 150px;
+			}
 		}
 	}
 
 	&__container {
-		padding: 100px 0;
+		@include mq($from: medium) {
+			padding: 100px 0;
+		}
 	}
 
 }

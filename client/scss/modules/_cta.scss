@@ -15,11 +15,13 @@
     transform: translateX(-50%);
   }
 
-  &:hover {
-    background-color: transparent;
+  @include mq($from: medium) {
+    &:hover {
+      background-color: transparent;
 
-    a {
-      color: $mondialfruttaRed;
+      a {
+        color: $mondialfruttaRed;
+      }
     }
   }
 

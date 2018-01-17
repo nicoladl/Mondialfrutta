@@ -50,7 +50,7 @@
             var scrollPercentage = ( (document.documentElement.scrollTop + document.body.scrollTop) - $('.visual').height() ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
             // Length to offset the dashes
-            var drawLength = pathLength * (scrollPercentage * 1.5);
+            var drawLength = pathLength * (scrollPercentage * 1.75);
 
             // Draw in reverse
             path.style.strokeDashoffset = pathLength - drawLength;
@@ -160,6 +160,11 @@
                 b.trigger('reset')
             }
         })
-    })
+    });
+
+    if ($('.video--fullscreen').length > 0) {
+        var video = $('.video--fullscreen').get(0);
+        enableInlineVideo(video);
+    }
 
 })(jQuery);

@@ -26,7 +26,7 @@
 						</a>
 
 						Partita IVA  03149980264<br>
-						Tel. +39 0423 22911<br>
+						Tel. +39 0423 22911 int 2<br>
 						E-mail <a class="nounderline" href="mailto:ordini@mondialfrutta.com">ordini@mondialfrutta.com</a>
 					</p>
 				</div>
@@ -38,14 +38,6 @@
 		<div class="row">
 			<div class="column medium-full">
 				<div class="contact">
-					<!-- <form action method class="row" id="contatti">
-						<input class="column small-full medium-half short" placeholder="Nome" type="text" name="Nome">
-						<input class="column small-full medium-half reset" placeholder="Cognome" type="text" name="Cognome">
-						<input class="column small-full medium-half short" placeholder="E-mail" type="email" name="E-mail">
-						<input class="column small-full medium-half reset" placeholder="Azienda" type="text" name="Azienda">
-						<textarea class="column medium-full reset" name="Messaggio">Messaggio</textarea>
-						<input class="cta" type="submit" value="invia">
-					</form> -->
 					{{ page.content }}
 				</div>
 			</div>
@@ -55,6 +47,14 @@
 
 <script>
 function initMap() {
+	var zoom;
+
+	if (window.innerWidth > 1024) {
+		zoom = 13;
+	} else {
+		zoom = 10;
+	}
+
 	var mondialfrutta = {
 		pos: {
 			lat: 45.7765148,
@@ -64,7 +64,7 @@ function initMap() {
 	};
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 13,
+		zoom: zoom,
 		center: mondialfrutta.pos,
 		disableDefaultUI: true,
 		scrollwheel: false,
