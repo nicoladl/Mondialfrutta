@@ -13,13 +13,27 @@
     </div>
 
     <div class="row wrapper">
-      <div class="column large-full">
+      <div class="column small-full">
         {{ page.content }}
       </div>
     </div>
 
   </main>
 </div>{# /.layout-container #}
+
+<div class="modal" data-modal="contatti">
+  <div class="modal__header green">
+    <div class="title">Schede tecniche</div>
+    <i class="icon icon-consegne"></i>
+  </div>
+  <div class="modal__content">
+    <div class="text">Per ricevere il materiale relativo ai nostri prodotti, scrivici indicado il nome cliente e i prodotti ai quali sei interessato. Ti risponderemo il prima possibile.</div>
+    <br><br>
+    <div class="cta"><a href="/contatti">contattaci</a></div>
+    <br><br>
+    <div class="modal-close">chiudi</div>
+  </div>
+</div>
 
 {% if page.footer %}
   <footer role="contentinfo">

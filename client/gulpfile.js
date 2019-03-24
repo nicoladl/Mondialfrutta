@@ -32,7 +32,12 @@ gulp.task('styles', function() {
     gulp.src('scss/**/*.scss')
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(sass())
-        .pipe(prefix())
+        .pipe(prefix({
+            browsers: [
+                'last 2 versions',
+                'ie >= 11'
+            ]
+        }))
         .pipe(gulp.dest('../docroot/themes/custom/mondialfrutta/css'))
         .pipe(browserSync.stream());
 });

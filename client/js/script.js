@@ -115,8 +115,10 @@
     }
 
     // Modal
-    $('.modal-init').on('click', function() {
+    $('.modal-init').on('click', function(e) {
         var modal = $(this).data('modal');
+        console.log(modal)
+        e.preventDefault();
 
         $('.modal[data-modal="'+ modal +'"]').addClass('show');
         $('.overlay').toggleClass('open');

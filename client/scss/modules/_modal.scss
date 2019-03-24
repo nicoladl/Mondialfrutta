@@ -110,6 +110,10 @@
 			color: $mondialfruttaGreen;
 			padding-top: 50px;
 			cursor: pointer;
+
+			@include mq($until: medium) {
+				font-size: 18px;
+			}
 		}
 	}
 
